@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <StartupObject>MachineStop.Program</StartupObject>
+    <Copyright>© 2022-2023 VESO Software. Direitos reservados.</Copyright>
+    <AssemblyVersion>1.07.01.23</AssemblyVersion>
+    <Product>VESO DBMS Services Manager</Product>
+    <Company>VESO Software</Company>
+    <Authors>William Silva - william.silva@viannasempre.com.br</Authors>
+    <ApplicationIcon>toolbox.ico</ApplicationIcon>
+    <Description>Gerenciador de serviços de Bancos de Dados para Windows.</Description>
+    <Title>DBMS Services Manager</Title>
+    <FileVersion>1.07.01.23</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="toolbox.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
