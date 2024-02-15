@@ -4,7 +4,7 @@
 
 using MachineStop;
 
-namespace DBMS_Services_Manager.View
+namespace DBMS_Services_Manager.View.ServiceStatus
 {
     internal interface IServiceStatusView
     {

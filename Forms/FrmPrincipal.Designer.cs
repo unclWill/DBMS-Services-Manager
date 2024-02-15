@@ -53,19 +53,19 @@
             pbMySQLServiceStatus = new System.Windows.Forms.PictureBox();
             pbSQLServerServiceStatus = new System.Windows.Forms.PictureBox();
             pnlMongoDB = new System.Windows.Forms.Panel();
-            pictureBox1 = new System.Windows.Forms.PictureBox();
+            pbMongoDBLogo = new System.Windows.Forms.PictureBox();
             pnlMariaDB = new System.Windows.Forms.Panel();
-            pbDB04Logo = new System.Windows.Forms.PictureBox();
+            pbMariaDBLogo = new System.Windows.Forms.PictureBox();
             pnlPostgreSQL = new System.Windows.Forms.Panel();
-            pbDB03Logo = new System.Windows.Forms.PictureBox();
+            pbPostgreSQLLogo = new System.Windows.Forms.PictureBox();
             pnlMySQL = new System.Windows.Forms.Panel();
-            pbDB02Logo = new System.Windows.Forms.PictureBox();
+            pbMySQLLogo = new System.Windows.Forms.PictureBox();
             pnlSQLServer = new System.Windows.Forms.Panel();
-            pbDB01Logo = new System.Windows.Forms.PictureBox();
+            pbSQLServerLogo = new System.Windows.Forms.PictureBox();
             panel1 = new System.Windows.Forms.Panel();
             btnRestartSQLServer = new System.Windows.Forms.Button();
             btnStopSQLServer = new System.Windows.Forms.Button();
-            pnlMachineStopHeader = new System.Windows.Forms.Panel();
+            pnlHeader = new System.Windows.Forms.Panel();
             lblApplicationName = new System.Windows.Forms.Label();
             btnAbout = new System.Windows.Forms.Button();
             pbDeveloperLogo = new System.Windows.Forms.PictureBox();
@@ -78,13 +78,13 @@
             pnlServicesMainController = new System.Windows.Forms.Panel();
             pnlServicesControllerBorder = new System.Windows.Forms.Panel();
             btnSettings = new System.Windows.Forms.Button();
-            label1 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
+            lblQuickCommands = new System.Windows.Forms.Label();
+            lblManageServices = new System.Windows.Forms.Label();
             pnlServiceStatus = new System.Windows.Forms.Panel();
             lblServiceStatus = new System.Windows.Forms.Label();
-            panel8 = new System.Windows.Forms.Panel();
-            panel6 = new System.Windows.Forms.Panel();
-            label4 = new System.Windows.Forms.Label();
+            pnlFooter = new System.Windows.Forms.Panel();
+            pnlServiceLogo = new System.Windows.Forms.Panel();
+            lblServices = new System.Windows.Forms.Label();
             panel2.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
@@ -95,22 +95,22 @@
             ((System.ComponentModel.ISupportInitialize)pbMySQLServiceStatus).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbSQLServerServiceStatus).BeginInit();
             pnlMongoDB.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbMongoDBLogo).BeginInit();
             pnlMariaDB.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbDB04Logo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbMariaDBLogo).BeginInit();
             pnlPostgreSQL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbDB03Logo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbPostgreSQLLogo).BeginInit();
             pnlMySQL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbDB02Logo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbMySQLLogo).BeginInit();
             pnlSQLServer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbDB01Logo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbSQLServerLogo).BeginInit();
             panel1.SuspendLayout();
-            pnlMachineStopHeader.SuspendLayout();
+            pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbDeveloperLogo).BeginInit();
             pnlServicesMainController.SuspendLayout();
             pnlServicesControllerBorder.SuspendLayout();
             pnlServiceStatus.SuspendLayout();
-            panel6.SuspendLayout();
+            pnlServiceLogo.SuspendLayout();
             SuspendLayout();
             // 
             // panel2
@@ -393,29 +393,29 @@
             pnlMongoDB.Controls.Add(txtMongoDBServiceStatus);
             pnlMongoDB.Controls.Add(pbMongoDBServiceStatus);
             pnlMongoDB.Controls.Add(panel5);
-            pnlMongoDB.Controls.Add(pictureBox1);
+            pnlMongoDB.Controls.Add(pbMongoDBLogo);
             pnlMongoDB.Location = new System.Drawing.Point(12, 519);
             pnlMongoDB.Name = "pnlMongoDB";
             pnlMongoDB.Size = new System.Drawing.Size(623, 71);
             pnlMongoDB.TabIndex = 8;
             // 
-            // pictureBox1
+            // pbMongoDBLogo
             // 
-            pictureBox1.BackColor = System.Drawing.SystemColors.Window;
-            pictureBox1.BackgroundImage = DBMS_Services_Manager.Properties.Resources._2560px_MongoDB_Logo_svg;
-            pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            pictureBox1.Location = new System.Drawing.Point(-1, -1);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(131, 73);
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
+            pbMongoDBLogo.BackColor = System.Drawing.SystemColors.Window;
+            pbMongoDBLogo.BackgroundImage = DBMS_Services_Manager.Properties.Resources._2560px_MongoDB_Logo_svg;
+            pbMongoDBLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            pbMongoDBLogo.Location = new System.Drawing.Point(-1, -1);
+            pbMongoDBLogo.Name = "pbMongoDBLogo";
+            pbMongoDBLogo.Size = new System.Drawing.Size(131, 73);
+            pbMongoDBLogo.TabIndex = 6;
+            pbMongoDBLogo.TabStop = false;
             // 
             // pnlMariaDB
             // 
             pnlMariaDB.Anchor = System.Windows.Forms.AnchorStyles.None;
             pnlMariaDB.BackColor = System.Drawing.Color.White;
             pnlMariaDB.Controls.Add(txtMariaDBServiceStatus);
-            pnlMariaDB.Controls.Add(pbDB04Logo);
+            pnlMariaDB.Controls.Add(pbMariaDBLogo);
             pnlMariaDB.Controls.Add(pbMariaDBServiceStatus);
             pnlMariaDB.Controls.Add(panel4);
             pnlMariaDB.Location = new System.Drawing.Point(12, 432);
@@ -423,23 +423,23 @@
             pnlMariaDB.Size = new System.Drawing.Size(623, 71);
             pnlMariaDB.TabIndex = 8;
             // 
-            // pbDB04Logo
+            // pbMariaDBLogo
             // 
-            pbDB04Logo.BackColor = System.Drawing.SystemColors.Window;
-            pbDB04Logo.BackgroundImage = DBMS_Services_Manager.Properties.Resources.Mariadb_seal_browntext_svg;
-            pbDB04Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            pbDB04Logo.Location = new System.Drawing.Point(-1, -1);
-            pbDB04Logo.Name = "pbDB04Logo";
-            pbDB04Logo.Size = new System.Drawing.Size(131, 73);
-            pbDB04Logo.TabIndex = 6;
-            pbDB04Logo.TabStop = false;
+            pbMariaDBLogo.BackColor = System.Drawing.SystemColors.Window;
+            pbMariaDBLogo.BackgroundImage = DBMS_Services_Manager.Properties.Resources.Mariadb_seal_browntext_svg;
+            pbMariaDBLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            pbMariaDBLogo.Location = new System.Drawing.Point(-1, -1);
+            pbMariaDBLogo.Name = "pbMariaDBLogo";
+            pbMariaDBLogo.Size = new System.Drawing.Size(131, 73);
+            pbMariaDBLogo.TabIndex = 6;
+            pbMariaDBLogo.TabStop = false;
             // 
             // pnlPostgreSQL
             // 
             pnlPostgreSQL.Anchor = System.Windows.Forms.AnchorStyles.None;
             pnlPostgreSQL.BackColor = System.Drawing.Color.White;
             pnlPostgreSQL.Controls.Add(txtPostgreSQLServiceStatus);
-            pnlPostgreSQL.Controls.Add(pbDB03Logo);
+            pnlPostgreSQL.Controls.Add(pbPostgreSQLLogo);
             pnlPostgreSQL.Controls.Add(panel3);
             pnlPostgreSQL.Controls.Add(pbPostgreSQLServiceStatus);
             pnlPostgreSQL.Location = new System.Drawing.Point(12, 344);
@@ -447,16 +447,16 @@
             pnlPostgreSQL.Size = new System.Drawing.Size(623, 71);
             pnlPostgreSQL.TabIndex = 8;
             // 
-            // pbDB03Logo
+            // pbPostgreSQLLogo
             // 
-            pbDB03Logo.BackColor = System.Drawing.SystemColors.Window;
-            pbDB03Logo.BackgroundImage = DBMS_Services_Manager.Properties.Resources._242_2423721_logo_postgresql;
-            pbDB03Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            pbDB03Logo.Location = new System.Drawing.Point(-1, -1);
-            pbDB03Logo.Name = "pbDB03Logo";
-            pbDB03Logo.Size = new System.Drawing.Size(131, 73);
-            pbDB03Logo.TabIndex = 6;
-            pbDB03Logo.TabStop = false;
+            pbPostgreSQLLogo.BackColor = System.Drawing.SystemColors.Window;
+            pbPostgreSQLLogo.BackgroundImage = DBMS_Services_Manager.Properties.Resources._242_2423721_logo_postgresql;
+            pbPostgreSQLLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            pbPostgreSQLLogo.Location = new System.Drawing.Point(-1, -1);
+            pbPostgreSQLLogo.Name = "pbPostgreSQLLogo";
+            pbPostgreSQLLogo.Size = new System.Drawing.Size(131, 73);
+            pbPostgreSQLLogo.TabIndex = 6;
+            pbPostgreSQLLogo.TabStop = false;
             // 
             // pnlMySQL
             // 
@@ -464,29 +464,29 @@
             pnlMySQL.BackColor = System.Drawing.Color.White;
             pnlMySQL.Controls.Add(txtMySQLServiceStatus);
             pnlMySQL.Controls.Add(panel2);
-            pnlMySQL.Controls.Add(pbDB02Logo);
+            pnlMySQL.Controls.Add(pbMySQLLogo);
             pnlMySQL.Controls.Add(pbMySQLServiceStatus);
             pnlMySQL.Location = new System.Drawing.Point(12, 256);
             pnlMySQL.Name = "pnlMySQL";
             pnlMySQL.Size = new System.Drawing.Size(623, 71);
             pnlMySQL.TabIndex = 8;
             // 
-            // pbDB02Logo
+            // pbMySQLLogo
             // 
-            pbDB02Logo.BackColor = System.Drawing.SystemColors.Window;
-            pbDB02Logo.BackgroundImage = DBMS_Services_Manager.Properties.Resources.Mysql_logo;
-            pbDB02Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            pbDB02Logo.Location = new System.Drawing.Point(-1, -2);
-            pbDB02Logo.Name = "pbDB02Logo";
-            pbDB02Logo.Size = new System.Drawing.Size(131, 74);
-            pbDB02Logo.TabIndex = 6;
-            pbDB02Logo.TabStop = false;
+            pbMySQLLogo.BackColor = System.Drawing.SystemColors.Window;
+            pbMySQLLogo.BackgroundImage = DBMS_Services_Manager.Properties.Resources.Mysql_logo;
+            pbMySQLLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            pbMySQLLogo.Location = new System.Drawing.Point(-1, -2);
+            pbMySQLLogo.Name = "pbMySQLLogo";
+            pbMySQLLogo.Size = new System.Drawing.Size(131, 74);
+            pbMySQLLogo.TabIndex = 6;
+            pbMySQLLogo.TabStop = false;
             // 
             // pnlSQLServer
             // 
             pnlSQLServer.Anchor = System.Windows.Forms.AnchorStyles.None;
             pnlSQLServer.BackColor = System.Drawing.Color.White;
-            pnlSQLServer.Controls.Add(pbDB01Logo);
+            pnlSQLServer.Controls.Add(pbSQLServerLogo);
             pnlSQLServer.Controls.Add(pbSQLServerServiceStatus);
             pnlSQLServer.Controls.Add(txtSQLServerServiceStatus);
             pnlSQLServer.Controls.Add(panel1);
@@ -495,16 +495,16 @@
             pnlSQLServer.Size = new System.Drawing.Size(623, 71);
             pnlSQLServer.TabIndex = 8;
             // 
-            // pbDB01Logo
+            // pbSQLServerLogo
             // 
-            pbDB01Logo.BackColor = System.Drawing.SystemColors.Window;
-            pbDB01Logo.BackgroundImage = DBMS_Services_Manager.Properties.Resources.SQL_Server_Logo_768x194;
-            pbDB01Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            pbDB01Logo.Location = new System.Drawing.Point(-1, -1);
-            pbDB01Logo.Name = "pbDB01Logo";
-            pbDB01Logo.Size = new System.Drawing.Size(131, 73);
-            pbDB01Logo.TabIndex = 6;
-            pbDB01Logo.TabStop = false;
+            pbSQLServerLogo.BackColor = System.Drawing.SystemColors.Window;
+            pbSQLServerLogo.BackgroundImage = DBMS_Services_Manager.Properties.Resources.SQL_Server_Logo_768x194;
+            pbSQLServerLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            pbSQLServerLogo.Location = new System.Drawing.Point(-1, -1);
+            pbSQLServerLogo.Name = "pbSQLServerLogo";
+            pbSQLServerLogo.Size = new System.Drawing.Size(131, 73);
+            pbSQLServerLogo.TabIndex = 6;
+            pbSQLServerLogo.TabStop = false;
             // 
             // panel1
             // 
@@ -543,23 +543,23 @@
             btnStopSQLServer.UseVisualStyleBackColor = true;
             btnStopSQLServer.Click += BtnStopSQLServer_Click;
             // 
-            // pnlMachineStopHeader
+            // pnlHeader
             // 
-            pnlMachineStopHeader.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            pnlMachineStopHeader.BackColor = System.Drawing.Color.White;
-            pnlMachineStopHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            pnlMachineStopHeader.Controls.Add(lblApplicationName);
-            pnlMachineStopHeader.Controls.Add(btnAbout);
-            pnlMachineStopHeader.Controls.Add(pbDeveloperLogo);
-            pnlMachineStopHeader.Controls.Add(btnMinimize);
-            pnlMachineStopHeader.Controls.Add(btnClose);
-            pnlMachineStopHeader.Location = new System.Drawing.Point(1, 1);
-            pnlMachineStopHeader.Name = "pnlMachineStopHeader";
-            pnlMachineStopHeader.Size = new System.Drawing.Size(645, 41);
-            pnlMachineStopHeader.TabIndex = 0;
-            pnlMachineStopHeader.MouseDown += pnlMachineStopHeader_MouseDown;
-            pnlMachineStopHeader.MouseMove += pnlMachineStopHeader_MouseMove;
-            pnlMachineStopHeader.MouseUp += pnlMachineStopHeader_MouseUp;
+            pnlHeader.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            pnlHeader.BackColor = System.Drawing.Color.White;
+            pnlHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            pnlHeader.Controls.Add(lblApplicationName);
+            pnlHeader.Controls.Add(btnAbout);
+            pnlHeader.Controls.Add(pbDeveloperLogo);
+            pnlHeader.Controls.Add(btnMinimize);
+            pnlHeader.Controls.Add(btnClose);
+            pnlHeader.Location = new System.Drawing.Point(1, 1);
+            pnlHeader.Name = "pnlHeader";
+            pnlHeader.Size = new System.Drawing.Size(645, 41);
+            pnlHeader.TabIndex = 0;
+            pnlHeader.MouseDown += pnlHeader_MouseDown;
+            pnlHeader.MouseMove += pnlHeader_MouseMove;
+            pnlHeader.MouseUp += pnlHeader_MouseUp;
             // 
             // lblApplicationName
             // 
@@ -716,27 +716,27 @@
             btnSettings.UseVisualStyleBackColor = false;
             btnSettings.Click += btnSettings_Click;
             // 
-            // label1
+            // lblQuickCommands
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label1.Location = new System.Drawing.Point(256, 50);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(134, 20);
-            label1.TabIndex = 9;
-            label1.Text = "Comandos rápidos";
+            lblQuickCommands.AutoSize = true;
+            lblQuickCommands.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblQuickCommands.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            lblQuickCommands.Location = new System.Drawing.Point(256, 50);
+            lblQuickCommands.Name = "lblQuickCommands";
+            lblQuickCommands.Size = new System.Drawing.Size(134, 20);
+            lblQuickCommands.TabIndex = 9;
+            lblQuickCommands.Text = "Comandos rápidos";
             // 
-            // label2
+            // lblManageServices
             // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label2.Location = new System.Drawing.Point(221, 140);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(205, 20);
-            label2.TabIndex = 9;
-            label2.Text = "Gerenciar estado dos serviços";
+            lblManageServices.AutoSize = true;
+            lblManageServices.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblManageServices.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            lblManageServices.Location = new System.Drawing.Point(221, 140);
+            lblManageServices.Name = "lblManageServices";
+            lblManageServices.Size = new System.Drawing.Size(205, 20);
+            lblManageServices.TabIndex = 9;
+            lblManageServices.Text = "Gerenciar estado dos serviços";
             // 
             // pnlServiceStatus
             // 
@@ -760,36 +760,36 @@
             lblServiceStatus.TabIndex = 0;
             lblServiceStatus.Text = "Status";
             // 
-            // panel8
+            // pnlFooter
             // 
-            panel8.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            panel8.BackColor = System.Drawing.Color.LightGray;
-            panel8.Location = new System.Drawing.Point(1, 599);
-            panel8.Name = "panel8";
-            panel8.Size = new System.Drawing.Size(645, 41);
-            panel8.TabIndex = 11;
+            pnlFooter.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            pnlFooter.BackColor = System.Drawing.Color.LightGray;
+            pnlFooter.Location = new System.Drawing.Point(1, 599);
+            pnlFooter.Name = "pnlFooter";
+            pnlFooter.Size = new System.Drawing.Size(645, 41);
+            pnlFooter.TabIndex = 11;
             // 
-            // panel6
+            // pnlServiceLogo
             // 
-            panel6.BackColor = System.Drawing.Color.White;
-            panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            panel6.Controls.Add(label4);
-            panel6.Location = new System.Drawing.Point(11, 140);
-            panel6.Name = "panel6";
-            panel6.Size = new System.Drawing.Size(131, 453);
-            panel6.TabIndex = 14;
-            panel6.Visible = false;
+            pnlServiceLogo.BackColor = System.Drawing.Color.White;
+            pnlServiceLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            pnlServiceLogo.Controls.Add(lblServices);
+            pnlServiceLogo.Location = new System.Drawing.Point(11, 140);
+            pnlServiceLogo.Name = "pnlServiceLogo";
+            pnlServiceLogo.Size = new System.Drawing.Size(131, 453);
+            pnlServiceLogo.TabIndex = 14;
+            pnlServiceLogo.Visible = false;
             // 
-            // label4
+            // lblServices
             // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label4.Location = new System.Drawing.Point(37, 10);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(54, 15);
-            label4.TabIndex = 0;
-            label4.Text = "Serviços";
+            lblServices.AutoSize = true;
+            lblServices.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblServices.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            lblServices.Location = new System.Drawing.Point(37, 10);
+            lblServices.Name = "lblServices";
+            lblServices.Size = new System.Drawing.Size(54, 15);
+            lblServices.TabIndex = 0;
+            lblServices.Text = "Serviços";
             // 
             // FrmPrincipal
             // 
@@ -799,18 +799,18 @@
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ClientSize = new System.Drawing.Size(646, 645);
             ControlBox = false;
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblManageServices);
+            Controls.Add(lblQuickCommands);
             Controls.Add(btnExit);
             Controls.Add(pnlMongoDB);
-            Controls.Add(pnlMachineStopHeader);
+            Controls.Add(pnlHeader);
             Controls.Add(pnlServicesMainController);
             Controls.Add(pnlMariaDB);
             Controls.Add(pnlPostgreSQL);
             Controls.Add(pnlMySQL);
-            Controls.Add(panel8);
+            Controls.Add(pnlFooter);
             Controls.Add(pnlSQLServer);
-            Controls.Add(panel6);
+            Controls.Add(pnlServiceLogo);
             Controls.Add(pnlServiceStatus);
             DoubleBuffered = true;
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
@@ -831,89 +831,91 @@
             ((System.ComponentModel.ISupportInitialize)pbSQLServerServiceStatus).EndInit();
             pnlMongoDB.ResumeLayout(false);
             pnlMongoDB.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbMongoDBLogo).EndInit();
             pnlMariaDB.ResumeLayout(false);
             pnlMariaDB.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbDB04Logo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbMariaDBLogo).EndInit();
             pnlPostgreSQL.ResumeLayout(false);
             pnlPostgreSQL.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbDB03Logo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbPostgreSQLLogo).EndInit();
             pnlMySQL.ResumeLayout(false);
             pnlMySQL.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbDB02Logo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbMySQLLogo).EndInit();
             pnlSQLServer.ResumeLayout(false);
             pnlSQLServer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbDB01Logo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbSQLServerLogo).EndInit();
             panel1.ResumeLayout(false);
-            pnlMachineStopHeader.ResumeLayout(false);
-            pnlMachineStopHeader.PerformLayout();
+            pnlHeader.ResumeLayout(false);
+            pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbDeveloperLogo).EndInit();
             pnlServicesMainController.ResumeLayout(false);
             pnlServicesControllerBorder.ResumeLayout(false);
             pnlServiceStatus.ResumeLayout(false);
             pnlServiceStatus.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
+            pnlServiceLogo.ResumeLayout(false);
+            pnlServiceLogo.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        public System.Windows.Forms.PictureBox pbDB01Logo;
-        public System.Windows.Forms.PictureBox pbDB04Logo;
-        public System.Windows.Forms.PictureBox pbDB03Logo;
-        public System.Windows.Forms.PictureBox pbDB02Logo;
-        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox pbSQLServerLogo;
+        public System.Windows.Forms.PictureBox pbMariaDBLogo;
+        public System.Windows.Forms.PictureBox pbPostgreSQLLogo;
+        public System.Windows.Forms.PictureBox pbMySQLLogo;
+        public System.Windows.Forms.PictureBox pbMongoDBLogo;
         public System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.Button btnStopMariaDB;
         public System.Windows.Forms.Panel panel3;
-        public System.Windows.Forms.Button btnRestartPostgreSQL;
-        public System.Windows.Forms.Button btnStopPostgreSQL;
         public System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Button btnRestartMySQL;
-        public System.Windows.Forms.Button btnStopMySQL;
-        public System.Windows.Forms.Button btnRestartMariaDB;
-        public System.Windows.Forms.Panel pnlMachineStopHeader;
-        public System.Windows.Forms.Button btnClose;
-        public System.Windows.Forms.Button btnMinimize;
+        public System.Windows.Forms.Panel pnlHeader;
         public System.Windows.Forms.Panel pnlMongoDB;
         public System.Windows.Forms.Panel pnlMariaDB;
         public System.Windows.Forms.Panel pnlPostgreSQL;
-        public System.Windows.Forms.Panel pnlMySQL;
-        public System.Windows.Forms.Panel pnlSQLServer;
-        public System.Windows.Forms.Label lblApplicationName;
-        public System.Windows.Forms.PictureBox pbMongoDBServiceStatus;
-        public System.Windows.Forms.PictureBox pbMariaDBServiceStatus;
-        public System.Windows.Forms.PictureBox pbPostgreSQLServiceStatus;
-        public System.Windows.Forms.PictureBox pbMySQLServiceStatus;
-        public System.Windows.Forms.PictureBox pbSQLServerServiceStatus;
         public System.Windows.Forms.Timer tmrServiceStatusVerifier;
-        public System.Windows.Forms.TextBox txtPostgreSQLServiceStatus;
-        public System.Windows.Forms.TextBox txtMySQLServiceStatus;
         public System.Windows.Forms.Panel panel5;
-        public System.Windows.Forms.TextBox txtMongoDBServiceStatus;
-        public System.Windows.Forms.Button btnRestartMongoDB;
-        public System.Windows.Forms.Button btnStopMongoDB;
-        public System.Windows.Forms.TextBox txtMariaDBServiceStatus;
-        public System.Windows.Forms.TextBox txtSQLServerServiceStatus;
-        public System.Windows.Forms.PictureBox pbDeveloperLogo;
-        public System.Windows.Forms.Button btnAbout;
-        public System.Windows.Forms.Button btnRestartAllServices;
-        public System.Windows.Forms.Button btnStopAllServices;
-        public System.Windows.Forms.Button btnExit;
-        public System.Windows.Forms.Panel pnlServicesMainController;
         public System.Windows.Forms.Panel pnlServicesControllerBorder;
-        public System.Windows.Forms.Button btnSettings;
         public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label lblManageServices;
         public System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.Button btnRestartSQLServer;
-        public System.Windows.Forms.Button btnStopSQLServer;
         public System.Windows.Forms.Panel pnlServiceStatus;
         public System.Windows.Forms.Label lblServiceStatus;
-        public System.Windows.Forms.Panel panel8;
+        public System.Windows.Forms.Panel pnlFooter;
         public System.Windows.Forms.Panel panel6;
-        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label lblServices;
+        private System.Windows.Forms.PictureBox pbSQLServerServiceStatus;
+        private System.Windows.Forms.TextBox txtSQLServerServiceStatus;
+        private System.Windows.Forms.Button btnRestartSQLServer;
+        private System.Windows.Forms.Button btnStopSQLServer;
+        private System.Windows.Forms.PictureBox pbMySQLServiceStatus;
+        private System.Windows.Forms.TextBox txtMySQLServiceStatus;
+        private System.Windows.Forms.Button btnRestartMySQL;
+        private System.Windows.Forms.Button btnStopMySQL;
+        private System.Windows.Forms.Panel pnlMySQL;
+        private System.Windows.Forms.Panel pnlSQLServer;
+        private System.Windows.Forms.Button btnStopMariaDB;
+        private System.Windows.Forms.Button btnRestartPostgreSQL;
+        private System.Windows.Forms.Button btnStopPostgreSQL;
+        private System.Windows.Forms.Button btnRestartMariaDB;
+        private System.Windows.Forms.PictureBox pbMongoDBServiceStatus;
+        private System.Windows.Forms.PictureBox pbMariaDBServiceStatus;
+        private System.Windows.Forms.PictureBox pbPostgreSQLServiceStatus;
+        private System.Windows.Forms.TextBox txtPostgreSQLServiceStatus;
+        private System.Windows.Forms.TextBox txtMongoDBServiceStatus;
+        private System.Windows.Forms.Button btnRestartMongoDB;
+        private System.Windows.Forms.Button btnStopMongoDB;
+        private System.Windows.Forms.TextBox txtMariaDBServiceStatus;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnMinimize;
+        internal System.Windows.Forms.Label lblApplicationName;
+        private System.Windows.Forms.PictureBox pbDeveloperLogo;
+        private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.Button btnRestartAllServices;
+        private System.Windows.Forms.Button btnStopAllServices;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Label lblQuickCommands;
+        private System.Windows.Forms.Panel pnlServicesMainController;
+        private System.Windows.Forms.Panel pnlServiceLogo;
     }
 }
 

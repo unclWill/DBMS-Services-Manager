@@ -15,6 +15,7 @@
     <Description>Gerenciador de serviços de Bancos de Dados para Windows.</Description>
     <Title>DBMS Services Manager</Title>
     <FileVersion>1.14.02.24</FileVersion>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>

@@ -2,7 +2,7 @@
  * Data : 14/02/2024
  */
 
-using DBMS_Services_Manager.View;
+using DBMS_Services_Manager.View.ServiceStatus;
 using MachineStop;
 using System;
 using System.ServiceProcess;

@@ -4,7 +4,7 @@
 
 using System;
 using System.Windows.Forms;
-using DBMS_Services_Manager.View;
+using DBMS_Services_Manager.View.ServiceStatus;
 using MachineStop;
 
 namespace DBMS_Services_Manager.Controller.Services

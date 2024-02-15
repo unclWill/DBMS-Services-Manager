@@ -36,7 +36,6 @@ namespace MachineStop.Forms
         {
             btnEnableEdit.Visible = false;
             btnConfirm.Visible = true;
-
             //SQLServer
             txtSQLServerProcessName.ReadOnly = false;
             //MySQL
@@ -53,7 +52,6 @@ namespace MachineStop.Forms
         {
             btnEnableEdit.Visible = true;
             btnConfirm.Visible = false;
-
             //SQLServer
             txtSQLServerProcessName.ReadOnly = true;
             txtSQLServerServiceName.ReadOnly = true;
@@ -69,7 +67,6 @@ namespace MachineStop.Forms
             //MongoDB
             txtMongoDBServiceName.ReadOnly = true;
             txtMongoDBProcessName.ReadOnly = true;
-
             SaveSettings();
         }
 
@@ -82,14 +79,13 @@ namespace MachineStop.Forms
                 DBMS_Services_Manager.Properties.Settings.Default.MySQL_ServiceName = txtMySQLServiceName.Text;
                 DBMS_Services_Manager.Properties.Settings.Default.MySQL_ProcessName = txtMySQLProcessName.Text;
                 DBMS_Services_Manager.Properties.Settings.Default.PostgreSQL_ServiceName = txtPostgreSQLServiceName.Text;
-                DBMS_Services_Manager.Properties.Settings.Default.PostgreSQL_ProcessName = txtPostgreSQLServiceName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.PostgreSQL_ProcessName = txtPostgreSQLProcessName.Text;
                 DBMS_Services_Manager.Properties.Settings.Default.MariaDB_ServiceName = txtMariaDBServiceName.Text;
                 DBMS_Services_Manager.Properties.Settings.Default.MariaDB_ProcessName = txtMariaDBServiceName.Text;
                 DBMS_Services_Manager.Properties.Settings.Default.MongoDB_ServiceName = txtMongoDBServiceName.Text;
                 DBMS_Services_Manager.Properties.Settings.Default.MongoDB_ProcessName = txtMongoDBServiceName.Text;
                 DBMS_Services_Manager.Properties.Settings.Default.Save();
                 MessageBox.Show("As definições foram salvas com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //frmPrincipal.StartTimerServiceMonitor();
             }
             catch (Exception ex)
             {

@@ -2,6 +2,7 @@
  * Data : 14/02/2024
  */
 
+using System;
 using System.ServiceProcess;
 
 namespace DBMS_Services_Manager.Controller.Services
@@ -15,6 +16,11 @@ namespace DBMS_Services_Manager.Controller.Services
         {
             ServiceName = serviceName;
             ServiceProcessName = serviceProcessName;
+        }
+
+        public Service(string serviceProcessName)
+        {
+            this.serviceProcessName = serviceProcessName;
         }
 
         public Service() { }
@@ -46,9 +52,20 @@ namespace DBMS_Services_Manager.Controller.Services
             }
         }
 
-        public void StartService(Service service)
+        internal void StartService()
         {
-            // Estudar como simplificar o ServiceManager no FrmPrincipal.
+            ServiceController serviceCtrl = new ServiceController(this.ServiceProcessName);
+            serviceCtrl.Start();
+            var timeout = new TimeSpan(0, 0, 5); // 5seconds
+            serviceCtrl.WaitForStatus(ServiceControllerStatus.Running, timeout);
+        }
+
+        internal void StopService()
+        {
+            ServiceController serviceCtrl = new ServiceController(this.ServiceProcessName);
+            serviceCtrl.Stop();
+            var timeout = new TimeSpan(0, 0, 5);
+            serviceCtrl.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
         }
     }
 }

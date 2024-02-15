@@ -408,7 +408,7 @@
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             Name = "frmConfigs";
             ShowInTaskbar = false;
-            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             Text = "Configurações dos serviços";
             TopMost = true;
             tabConfigs.ResumeLayout(false);
