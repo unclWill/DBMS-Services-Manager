@@ -6,6 +6,7 @@ using System.Drawing;
 using DBMS_Services_Manager.Controller.ExecutionPolicies;
 using DBMS_Services_Manager.Controller.Services;
 using DBMS_Services_Manager.View;
+using DBMS_Services_Manager.Controller.Services.Management;
 
 namespace MachineStop
 {
@@ -107,10 +108,7 @@ namespace MachineStop
         //Iniciando o serviço
         private void StartSQLServer()
         {
-            ServiceController SQLServerMainService = new ServiceController(formConfigs.txtSQLServerProcessName.Text);
-            SQLServerMainService.Start();
-            var mainServiceTimeout = new TimeSpan(0, 0, 9); // 9seconds
-            SQLServerMainService.WaitForStatus(ServiceControllerStatus.Running, mainServiceTimeout);
+
         }
 
         //Parando o serviço
@@ -154,21 +152,21 @@ namespace MachineStop
         //Iniciando o serviço
         private void StartMySQL()
         {
-            string MYSQL_MAIN_SERVICE = formConfigs.txtMySQLProcessName.Text;
-            ServiceController mySQLService = new ServiceController(MYSQL_MAIN_SERVICE);
-            mySQLService.Start();
-            var timeout = new TimeSpan(0, 0, 5); // 5seconds
-            mySQLService.WaitForStatus(ServiceControllerStatus.Running, timeout);
+            string serviceName = DBMS_Services_Manager.Properties.Settings.Default.MySQL_ServiceName;
+            string serviceProcessName = DBMS_Services_Manager.Properties.Settings.Default.MySQL_ProcessName;
+            Service mySql = new Service(serviceName, serviceProcessName);
+            ServiceManager mySqlSvc = new ServiceManager(mySql);
+            mySqlSvc.StartService();
         }
 
         //Parando o serviço
         private void StopMySQL()
         {
-            string MYSQL_MAIN_SERVICE = formConfigs.txtMySQLProcessName.Text;
-            ServiceController mySQLService = new ServiceController(MYSQL_MAIN_SERVICE);
-            mySQLService.Stop();
-            var timeout = new TimeSpan(0, 0, 5); //conta 5 segundos até dar timeout
-            mySQLService.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+            string serviceName = DBMS_Services_Manager.Properties.Settings.Default.MySQL_ServiceName;
+            string serviceProcessName = DBMS_Services_Manager.Properties.Settings.Default.MySQL_ProcessName;
+            Service mySql = new Service(serviceName, serviceProcessName);
+            ServiceManager mySqlSvc = new ServiceManager(mySql);
+            mySqlSvc.StopService();
         }
 
         private void btnStopMySQL_Click(object sender, EventArgs e)
@@ -202,21 +200,13 @@ namespace MachineStop
         //Iniciando o serviço
         private void StartPostgreSQL()
         {
-            string POSTGRESQL_MAIN_SERVICE = formConfigs.txtPostgreSQLServiceName.Text;
-            ServiceController postgresqlService = new ServiceController(POSTGRESQL_MAIN_SERVICE);
-            postgresqlService.Start();
-            //var timeout = new TimeSpan(0, 0, 5); //conta 5 segundos até dar timeout
-            //postgresqlService.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+
         }
 
         //Parando o serviço
         private void StopPostgreSQL()
         {
-            string POSTGRESQL_MAIN_SERVICE = formConfigs.txtPostgreSQLServiceName.Text;
-            ServiceController postgresqlService = new ServiceController(POSTGRESQL_MAIN_SERVICE.Trim());
-            postgresqlService.Stop();
-            var timeout = new TimeSpan(0, 0, 5); //conta 5 segundos até dar timeout
-            postgresqlService.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+
         }
 
         private void btnStopPostgreSQL_Click(object sender, EventArgs e)
@@ -295,17 +285,6 @@ namespace MachineStop
 
         }
 
-        private void btnAbout_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(//"DBMS Services Manager - Versão: " + ProductVersion + "\n" +
-                "DBMS Services Manager - Versão: 1.0.14.02.24-alpha\n" +
-                "Gerenciador de Serviços de Bancos de Dados para Windows.\n\n" +
-                "Desenvolvido por: William Silva\n" +
-                "Repositórios: github.com/unclWill\n" +
-                "Contato: william.silva@viannasempre.com.br \n\n" +
-                "© 2022-2024 VESO Software. Direitos reservados.", "Sobre", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
         private void btnSettings_Click(object sender, EventArgs e)
         {
             formConfigs.ShowDialog();
@@ -341,6 +320,17 @@ namespace MachineStop
             }
         }
 
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(//"DBMS Services Manager - Versão: " + ProductVersion + "\n" +
+                "DBMS Services Manager - Versão: 1.0.14.02.24-alpha\n" +
+                "Gerenciador de Serviços de Bancos de Dados para Windows.\n\n" +
+                "Desenvolvido por: William Silva\n" +
+                "Repositórios: github.com/unclWill\n" +
+                "Contato: william.silva@viannasempre.com.br \n\n" +
+                "© 2022-2024 VESO Software. Direitos reservados.", "Sobre", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         //Verificando se o programa está sendo executado como Administrador
         private void WindowsElevationInfo()
         {
@@ -360,18 +350,6 @@ namespace MachineStop
         {
             ServiceMonitor serviceMonitor = new ServiceMonitor(this);
             serviceMonitor.MonitorTimerEventTrigger();
-
-            /*
-            ServicesInitializer svcInit = new ServicesInitializer(this);
-
-            try
-            {
-                svcInit.InitializeServices();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }*/
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)

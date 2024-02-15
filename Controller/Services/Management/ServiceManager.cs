@@ -1,19 +1,18 @@
 ﻿using System;
 using System.ServiceProcess;
 
-namespace DBMS_Services_Manager.Controller.Services
+namespace DBMS_Services_Manager.Controller.Services.Management
 {
     internal class ServiceManager
     {
-        private Service _serviceMgr;
+        private Service? service;
 
-        public Service ServiceMagr
+        public ServiceManager(Service service)
         {
-            get { return _serviceMgr; }
-            set { _serviceMgr = value; }
+            this.service = service;
         }
 
-        public void StartService(Service service)
+        public void StartService()
         {
             ServiceController serviceCtrl = new ServiceController(service.ServiceProcessName);
             serviceCtrl.Start();
@@ -21,7 +20,7 @@ namespace DBMS_Services_Manager.Controller.Services
             serviceCtrl.WaitForStatus(ServiceControllerStatus.Running, timeout);
         }
 
-        public void StopService(Service service)
+        public void StopService()
         {
             ServiceController serviceCtrl = new ServiceController(service.ServiceProcessName);
             serviceCtrl.Stop();

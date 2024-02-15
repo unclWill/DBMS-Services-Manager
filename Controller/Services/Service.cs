@@ -45,5 +45,10 @@ namespace DBMS_Services_Manager.Controller.Services
                 return false;
             }
         }
+
+        public void StartService(Service service)
+        {
+            // Estudar como simplificar o ServiceManager no FrmPrincipal.
+        }
     }
 }
