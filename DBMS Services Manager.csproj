@@ -16,6 +16,10 @@
     <Title>DBMS Services Manager</Title>
     <FileVersion>1.14.02.24</FileVersion>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/unclWill/DBMS-Services-Manager</RepositoryUrl>
+    <PackageIcon>Coffee.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -47,9 +51,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="ImageResources\png\Coffee.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="toolbox.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 

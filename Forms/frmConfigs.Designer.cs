@@ -58,12 +58,15 @@
             btnConfirm = new System.Windows.Forms.Button();
             btnEnableEdit = new System.Windows.Forms.Button();
             btnClose = new System.Windows.Forms.Button();
+            button1 = new System.Windows.Forms.Button();
+            panel1 = new System.Windows.Forms.Panel();
             tabConfigs.SuspendLayout();
             tpSQLServer.SuspendLayout();
             tpMySQL.SuspendLayout();
             tpPostgreSQL.SuspendLayout();
             tpMariaDB.SuspendLayout();
             tpMongoDB.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // tabConfigs
@@ -372,6 +375,7 @@
             // 
             // btnEnableEdit
             // 
+            btnEnableEdit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnEnableEdit.Image = (System.Drawing.Image)resources.GetObject("btnEnableEdit.Image");
             btnEnableEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btnEnableEdit.Location = new System.Drawing.Point(16, 200);
@@ -384,14 +388,45 @@
             // 
             // btnClose
             // 
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Snow;
+            btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Linen;
+            btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnClose.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnClose.Location = new System.Drawing.Point(13, 258);
+            btnClose.Location = new System.Drawing.Point(13, 266);
             btnClose.Name = "btnClose";
-            btnClose.Size = new System.Drawing.Size(449, 33);
+            btnClose.Size = new System.Drawing.Size(449, 26);
             btnClose.TabIndex = 1;
-            btnClose.Text = "Fechar";
+            btnClose.Text = "&Fechar";
             btnClose.UseVisualStyleBackColor = true;
             btnClose.Click += btnClose_Click;
+            // 
+            // button1
+            // 
+            button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Snow;
+            button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Linen;
+            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button1.Location = new System.Drawing.Point(10, -46);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(722, 26);
+            button1.TabIndex = 8;
+            button1.Text = "&Fechar";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = System.Drawing.Color.LightGray;
+            panel1.Controls.Add(button1);
+            panel1.Location = new System.Drawing.Point(-3, 257);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(480, 45);
+            panel1.TabIndex = 19;
             // 
             // frmConfigs
             // 
@@ -399,13 +434,16 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ClientSize = new System.Drawing.Size(474, 301);
-            ControlBox = false;
             Controls.Add(btnEnableEdit);
             Controls.Add(btnClose);
             Controls.Add(btnConfirm);
             Controls.Add(tabConfigs);
+            Controls.Add(panel1);
             DoubleBuffered = true;
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmConfigs";
             ShowInTaskbar = false;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -422,6 +460,7 @@
             tpMariaDB.PerformLayout();
             tpMongoDB.ResumeLayout(false);
             tpMongoDB.PerformLayout();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -455,5 +494,7 @@
         private System.Windows.Forms.Label label15;
         public System.Windows.Forms.TextBox txtMongoDBProcessName;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

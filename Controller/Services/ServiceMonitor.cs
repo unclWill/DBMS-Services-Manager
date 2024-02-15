@@ -1,5 +1,6 @@
-﻿/* Autor: William Silva (https://github.com/unclWill)
- * Data : 14/02/2024
+﻿/* 
+ * Author: William Silva (https://github.com/unclWill)
+ * Date  : 14/02/2024
  */
 
 using DBMS_Services_Manager.View.ServiceStatus;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 namespace DBMS_Services_Manager.Controller.Services
 {
     /// <summary>
-    /// Classe que faz o monitoramento do estado dos serviços.
+    /// Classe responsável por realizar o monitoramento do estado dos serviços.
     /// </summary>
     internal class ServiceMonitor
     {
@@ -22,7 +23,7 @@ namespace DBMS_Services_Manager.Controller.Services
             this.frmPrincipal = frmPrincipal;
         }
 
-        public void ServiceStatus(Service service, IServiceStatusView serviceStatusView)
+        internal void ServiceStatus(Service service, IServiceStatusView serviceStatusView)
         {
             ServiceController serviceProcess = new ServiceController(service.ServiceProcessName);
 
@@ -43,8 +44,8 @@ namespace DBMS_Services_Manager.Controller.Services
             }
         }
 
-        //Timer que faz a verificação em tempo real da execução dos serviços.
-        public void StartServiceMonitor()
+        //Timer que acompanha em tempo real o estado de execução dos serviços.
+        internal void StartServiceMonitor()
         {
             frmPrincipal.tmrServiceStatusVerifier.Interval = 300;
             frmPrincipal.tmrServiceStatusVerifier.Tick += new EventHandler(frmPrincipal.tmrServiceStatusVerifier_Tick!);
@@ -64,11 +65,12 @@ namespace DBMS_Services_Manager.Controller.Services
 
             try
             {
-                svcInit.InitializeServices();
+                svcInit.InitializeServicesStatusMonitor();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                const string message = "Ocorreu um erro";
+                MessageBox.Show($"[Erro] {ex.Message}\n\n[Aviso] Ocorreu um erro", message);
             }
         }
     }

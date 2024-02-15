@@ -1,5 +1,6 @@
-﻿/* Autor: William Silva (https://github.com/unclWill)
- * Data : 15/02/2024
+﻿/* 
+ * Author: William Silva (https://github.com/unclWill)
+ * Date  : 15/02/2024
  */
 
 using DBMS_Services_Manager.Controller.Services;

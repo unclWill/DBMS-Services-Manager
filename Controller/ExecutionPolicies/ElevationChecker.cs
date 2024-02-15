@@ -1,10 +1,11 @@
-﻿/* Autor: William Silva (https://github.com/unclWill)
- * Data : 14/02/2024
+﻿/* 
+ * Author: William Silva (https://github.com/unclWill)
+ * Date  : 14/02/2024
  */
 
 using System;
 using System.Security.Principal;
-using static System.Net.Mime.MediaTypeNames;
+using MachineStop;
 
 namespace DBMS_Services_Manager.Controller.ExecutionPolicies
 {

@@ -1,5 +1,6 @@
-﻿/* Autor: William Silva (https://github.com/unclWill)
- * Data : 14/02/2024
+﻿/* 
+ * Author: William Silva (https://github.com/unclWill)
+ * Date  : 14/02/2024
  */
 
 using System;
@@ -11,8 +12,8 @@ namespace DBMS_Services_Manager.Controller.Services
 {
     internal class Service
     {
-        private string serviceName;
-        private string serviceProcessName;
+        private string? serviceName;
+        private string? serviceProcessName;
 
         public Service(string serviceName, string serviceProcessName)
         {
@@ -29,14 +30,14 @@ namespace DBMS_Services_Manager.Controller.Services
 
         public string ServiceName
         {
-            get { return serviceName; }
-            set { serviceName = value; }
+            get => serviceName!;
+            set => serviceName = value;
         }
 
         public string ServiceProcessName
         {
-            get { return serviceProcessName; }
-            set { serviceProcessName = value; }
+            get => serviceProcessName!;
+            set => serviceProcessName = value;
         }
 
         public bool IsServiceInstalled
@@ -58,10 +59,10 @@ namespace DBMS_Services_Manager.Controller.Services
         {
             try
             {
-                ServiceController serviceCtrl = new ServiceController(this.ServiceProcessName);
-                serviceCtrl.Start();
+                ServiceController serviceController = new ServiceController(this.ServiceProcessName);
+                serviceController.Start();
                 var timeout = new TimeSpan(0, 0, 5); // 5 seconds.
-                serviceCtrl.WaitForStatus(ServiceControllerStatus.Running, timeout);
+                serviceController.WaitForStatus(ServiceControllerStatus.Running, timeout);
             }
             catch (Exception ex)
             {
@@ -75,10 +76,10 @@ namespace DBMS_Services_Manager.Controller.Services
         {
             try
             {
-                ServiceController serviceCtrl = new ServiceController(this.ServiceProcessName);
-                serviceCtrl.Stop();
+                ServiceController serviceController = new ServiceController(this.ServiceProcessName);
+                serviceController.Stop();
                 var timeout = new TimeSpan(0, 0, 5);
-                serviceCtrl.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+                serviceController.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
             }
             catch (Exception ex)
             {

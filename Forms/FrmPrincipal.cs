@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* 
+ * Author: William Silva (https://github.com/unclWill)
+ * Date  : 15/02/2024
+ */
+
+using System;
 using System.Windows.Forms;
 using MachineStop.Forms;
 using System.Drawing;

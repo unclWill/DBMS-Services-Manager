@@ -1,5 +1,6 @@
-﻿/* Autor: William Silva (https://github.com/unclWill)
- * Data : 14/02/2024
+﻿/* 
+ * Author: William Silva (https://github.com/unclWill)
+ * Date  : 14/02/2024
  */
 
 using System;
@@ -10,7 +11,7 @@ using MachineStop;
 namespace DBMS_Services_Manager.Controller.Services
 {
     /// <summary>
-    /// Classe responsável pela inicialização dos serviços.
+    /// Classe responsável pelo instanciamento dos serviços para o ServiceMonitor.
     /// </summary>
     internal class ServicesInitializer
     {
@@ -21,7 +22,7 @@ namespace DBMS_Services_Manager.Controller.Services
             this.frmPrincipal = frmPrincipal;
         }
 
-        public void InitializeServices()
+        internal void InitializeServicesStatusMonitor()
         {
             try
             {
@@ -33,8 +34,18 @@ namespace DBMS_Services_Manager.Controller.Services
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocorreu um erro: {ex}", "Ocorreu um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"[Erro] {ex}", "Ocorreu um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void InitializeSQLServer()
+        {
+            string serviceName = Properties.Settings.Default.SQLServer_ServiceName;
+            string serviceProcessName = Properties.Settings.Default.SQLServer_ProcessName;
+            Service sqlServer = new Service(serviceName, serviceProcessName);
+            SQLServerStatusView sqlServerView = new SQLServerStatusView();
+            ServiceMonitor sqlServerMonitor = new ServiceMonitor(frmPrincipal);
+            sqlServerMonitor.ServiceStatus(sqlServer, sqlServerView);
         }
 
         private void InitializeMySQL()
@@ -49,16 +60,6 @@ namespace DBMS_Services_Manager.Controller.Services
             // Monitor.
             ServiceMonitor mySqlMonitor = new ServiceMonitor(frmPrincipal);
             mySqlMonitor.ServiceStatus(mySql, mySqlView);
-        }
-
-        private void InitializeSQLServer()
-        {
-            string serviceName = Properties.Settings.Default.SQLServer_ServiceName;
-            string serviceProcessName = Properties.Settings.Default.SQLServer_ProcessName;
-            Service sqlServer = new Service(serviceName, serviceProcessName);
-            SQLServerStatusView sqlServerView = new SQLServerStatusView();
-            ServiceMonitor sqlServerMonitor = new ServiceMonitor(frmPrincipal);
-            sqlServerMonitor.ServiceStatus(sqlServer, sqlServerView);
         }
 
         private void InitializePostgreSQL()
