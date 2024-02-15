@@ -12,7 +12,7 @@ namespace DBMS_Services_Manager.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.2.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -20,6 +20,126 @@ namespace DBMS_Services_Manager.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("MySQL80")]
+        public string MySQL_ProcessName {
+            get {
+                return ((string)(this["MySQL_ProcessName"]));
+            }
+            set {
+                this["MySQL_ProcessName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("postgresql-x64-16")]
+        public string PostgreSQL_ProcessName {
+            get {
+                return ((string)(this["PostgreSQL_ProcessName"]));
+            }
+            set {
+                this["PostgreSQL_ProcessName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("MSSQL$SQLEXPRESS")]
+        public string SQLServer_ProcessName {
+            get {
+                return ((string)(this["SQLServer_ProcessName"]));
+            }
+            set {
+                this["SQLServer_ProcessName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MariaDB_ProcessName {
+            get {
+                return ((string)(this["MariaDB_ProcessName"]));
+            }
+            set {
+                this["MariaDB_ProcessName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MongoDB_ProcessName {
+            get {
+                return ((string)(this["MongoDB_ProcessName"]));
+            }
+            set {
+                this["MongoDB_ProcessName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MySQL_ServiceName {
+            get {
+                return ((string)(this["MySQL_ServiceName"]));
+            }
+            set {
+                this["MySQL_ServiceName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PostgreSQL_ServiceName {
+            get {
+                return ((string)(this["PostgreSQL_ServiceName"]));
+            }
+            set {
+                this["PostgreSQL_ServiceName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SQLServer_ServiceName {
+            get {
+                return ((string)(this["SQLServer_ServiceName"]));
+            }
+            set {
+                this["SQLServer_ServiceName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MariaDB_ServiceName {
+            get {
+                return ((string)(this["MariaDB_ServiceName"]));
+            }
+            set {
+                this["MariaDB_ServiceName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MongoDB_ServiceName {
+            get {
+                return ((string)(this["MongoDB_ServiceName"]));
+            }
+            set {
+                this["MongoDB_ServiceName"] = value;
             }
         }
     }

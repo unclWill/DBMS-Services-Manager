@@ -1,6 +1,36 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DBMS_Services_Manager.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MySQL_ProcessName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MySQL80</Value>
+    </Setting>
+    <Setting Name="PostgreSQL_ProcessName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">postgresql-x64-16</Value>
+    </Setting>
+    <Setting Name="SQLServer_ProcessName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MSSQL$SQLEXPRESS</Value>
+    </Setting>
+    <Setting Name="MariaDB_ProcessName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MongoDB_ProcessName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MySQL_ServiceName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PostgreSQL_ServiceName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SQLServer_ServiceName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MariaDB_ServiceName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MongoDB_ServiceName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
 </SettingsFile>

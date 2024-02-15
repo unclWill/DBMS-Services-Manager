@@ -8,70 +8,98 @@ namespace MachineStop.Forms
         public frmConfigs()
         {
             InitializeComponent();
+            LoadConfigs();
         }
-            private void btnEnableEdit_Click(object sender, EventArgs e) {
-            FrmPrincipal frmPrincipal = new FrmPrincipal(); //Instanciação do formulário Principal.
-            frmPrincipal.StopTimerServiceMonitor();
 
+        private void LoadConfigs()
+        {
+            try
+            {
+                DBMS_Services_Manager.Properties.Settings.Default.SQLServer_ServiceName = txtSQLServerServiceName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.SQLServer_ProcessName = txtSQLServerProcessName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.MySQL_ServiceName = txtMySQLServiceName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.MySQL_ProcessName = txtMySQLProcessName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.PostgreSQL_ServiceName = txtPostgreSQLServiceName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.PostgreSQL_ProcessName = txtPostgreSQLProcessName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.MariaDB_ServiceName = txtMariaDBServiceName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.MariaDB_ProcessName = txtMariaDBProcessName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.MongoDB_ServiceName = txtMongoDBServiceName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.MongoDB_ProcessName = txtMongoDBProcessName.Text;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao carregar definições.\nDetalhes: {ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEnableEdit_Click(object sender, EventArgs e)
+        {
             btnEnableEdit.Visible = false;
             btnConfirm.Visible = true;
 
             //SQLServer
-            txtSQLServerMainService.ReadOnly = false;
-            txtSQLServerSecondaryService.ReadOnly = false;
-            txtSQLServerExtraService.ReadOnly = false;
+            txtSQLServerProcessName.ReadOnly = false;
             //MySQL
-            txtMySQLMainService.ReadOnly = false;
-            txtMySQLSecondaryService.ReadOnly = false;
-            txtMySQLExtraService.ReadOnly = false;
+            txtMySQLProcessName.ReadOnly = false;
             //PostgreSQL
-            txtPostgreSQLMainService.ReadOnly = false;
-            txtPostgreSQLSecondaryService.ReadOnly = false;
-            txtPostgreSQLExtraService.ReadOnly = false;
+            txtPostgreSQLProcessName.ReadOnly = false;
             //MariaDB
-            txtMariaDBMainService.ReadOnly = false;
-            txtMariaDBSecondaryService.ReadOnly = false;
-            txtMariaDBExtraService.ReadOnly = false;
+            txtMariaDBProcessName.ReadOnly = false;
             //MongoDB
-            txtMongoDBMainService.ReadOnly = false;
-            txtMongoDBSecondaryService.ReadOnly = false;
-            txtMongoDBExtraService.ReadOnly = false;
+            txtMongoDBProcessName.ReadOnly = false;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            FrmPrincipal frmPrincipal = new FrmPrincipal(); //Instanciação do formulário Principal.
-            frmPrincipal.StartTimerServiceMonitor();
-
             btnEnableEdit.Visible = true;
             btnConfirm.Visible = false;
 
             //SQLServer
-            txtSQLServerMainService.ReadOnly = true;
-            txtSQLServerSecondaryService.ReadOnly = true;
-            txtSQLServerExtraService.ReadOnly = true;
+            txtSQLServerProcessName.ReadOnly = true;
+            txtSQLServerServiceName.ReadOnly = true;
             //MySQL
-            txtMySQLMainService.ReadOnly = true;
-            txtMySQLSecondaryService.ReadOnly = true;
-            txtMySQLExtraService.ReadOnly = true;
+            txtMySQLProcessName.ReadOnly = true;
+            txtMySQLServiceName.ReadOnly = true;
             //PostgreSQL
-            txtPostgreSQLMainService.ReadOnly = true;
-            txtPostgreSQLSecondaryService.ReadOnly = true;
-            txtPostgreSQLExtraService.ReadOnly = true;
+            txtPostgreSQLServiceName.ReadOnly = true;
+            txtPostgreSQLProcessName.ReadOnly = true;
             //MariaDB
-            txtMariaDBMainService.ReadOnly = true;
-            txtMariaDBSecondaryService.ReadOnly = true;
-            txtMariaDBExtraService.ReadOnly = true;
+            txtMariaDBServiceName.ReadOnly = true;
+            txtMariaDBProcessName.ReadOnly = true;
             //MongoDB
-            txtMongoDBMainService.ReadOnly = true;
-            txtMongoDBSecondaryService.ReadOnly = true;
-            txtMongoDBExtraService.ReadOnly = true;
+            txtMongoDBServiceName.ReadOnly = true;
+            txtMongoDBProcessName.ReadOnly = true;
+
+            SaveSettings();
+        }
+
+        private void SaveSettings()
+        {
+            try
+            {
+                DBMS_Services_Manager.Properties.Settings.Default.SQLServer_ServiceName = txtSQLServerServiceName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.SQLServer_ProcessName = txtSQLServerProcessName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.MySQL_ServiceName = txtMySQLServiceName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.MySQL_ProcessName = txtMySQLProcessName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.PostgreSQL_ServiceName = txtPostgreSQLServiceName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.PostgreSQL_ProcessName = txtPostgreSQLServiceName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.MariaDB_ServiceName = txtMariaDBServiceName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.MariaDB_ProcessName = txtMariaDBServiceName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.MongoDB_ServiceName = txtMongoDBServiceName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.MongoDB_ProcessName = txtMongoDBServiceName.Text;
+                DBMS_Services_Manager.Properties.Settings.Default.Save();
+                MessageBox.Show("As definições foram salvas com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //frmPrincipal.StartTimerServiceMonitor();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao salvar as definições.\nDetalhes: {ex}", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
         }
-
     }
 }
