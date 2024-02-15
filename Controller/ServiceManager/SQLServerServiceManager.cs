@@ -13,34 +13,16 @@ namespace DBMS_Services_Manager.Controller.ServiceManager
     {
         public static void StartService()
         {
-            try
-            {
-                string serviceProcessName = Properties.Settings.Default.SQLServer_ProcessName;
-                Service sqlServer = new Service(serviceProcessName);
-                sqlServer.StartService();
-            }
-            catch (Exception ex)
-            {
-                string elevationMsg = CheckExecutionPrivileges.RequireElevationMessage();
-                const string message = "Ocorreu um erro ao tentar iniciar o serviço";
-                MessageBox.Show($"[Erro] {ex.Message}\n[Aviso] {elevationMsg}", message);
-            }
+            string serviceProcessName = Properties.Settings.Default.SQLServer_ProcessName;
+            Service sqlServer = new Service(serviceProcessName);
+            sqlServer.StartService();
         }
 
         public static void StopService()
         {
-            try
-            {
-                string serviceProcessName = Properties.Settings.Default.SQLServer_ProcessName;
-                Service sqlServer = new Service(serviceProcessName);
-                sqlServer.StopService();
-            }
-            catch (Exception ex)
-            {
-                string elevationMsg = CheckExecutionPrivileges.RequireElevationMessage();
-                const string message = "Ocorreu um erro ao tentar parar o serviço";
-                MessageBox.Show($"[Erro] {ex.Message}\n[Aviso] {elevationMsg}", message);
-            }
+            string serviceProcessName = Properties.Settings.Default.SQLServer_ProcessName;
+            Service sqlServer = new Service(serviceProcessName);
+            sqlServer.StopService();
         }
     }
 }

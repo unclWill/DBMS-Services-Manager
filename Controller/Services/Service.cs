@@ -4,6 +4,8 @@
 
 using System;
 using System.ServiceProcess;
+using DBMS_Services_Manager.Controller.ExecutionPolicies;
+using System.Windows.Forms;
 
 namespace DBMS_Services_Manager.Controller.Services
 {
@@ -54,18 +56,36 @@ namespace DBMS_Services_Manager.Controller.Services
 
         internal void StartService()
         {
-            ServiceController serviceCtrl = new ServiceController(this.ServiceProcessName);
-            serviceCtrl.Start();
-            var timeout = new TimeSpan(0, 0, 5); // 5seconds
-            serviceCtrl.WaitForStatus(ServiceControllerStatus.Running, timeout);
+            try
+            {
+                ServiceController serviceCtrl = new ServiceController(this.ServiceProcessName);
+                serviceCtrl.Start();
+                var timeout = new TimeSpan(0, 0, 5); // 5 seconds.
+                serviceCtrl.WaitForStatus(ServiceControllerStatus.Running, timeout);
+            }
+            catch (Exception ex)
+            {
+                string elevationMsg = CheckExecutionPrivileges.RequireElevationMessage();
+                const string message = "Ocorreu um erro ao tentar iniciar o serviço";
+                MessageBox.Show($"[Erro] {ex.Message}\n[Aviso] {elevationMsg}", message);
+            }
         }
 
         internal void StopService()
         {
-            ServiceController serviceCtrl = new ServiceController(this.ServiceProcessName);
-            serviceCtrl.Stop();
-            var timeout = new TimeSpan(0, 0, 5);
-            serviceCtrl.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+            try
+            {
+                ServiceController serviceCtrl = new ServiceController(this.ServiceProcessName);
+                serviceCtrl.Stop();
+                var timeout = new TimeSpan(0, 0, 5);
+                serviceCtrl.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+            }
+            catch (Exception ex)
+            {
+                string elevationMsg = CheckExecutionPrivileges.RequireElevationMessage();
+                const string message = "Ocorreu um erro ao tentar parar o serviço";
+                MessageBox.Show($"[Erro] {ex.Message}\n[Aviso] {elevationMsg}", message);
+            }
         }
     }
 }
