@@ -68,14 +68,14 @@
             pnlBackground.Controls.Add(pbIcon);
             pnlBackground.Location = new System.Drawing.Point(6, 10);
             pnlBackground.Name = "pnlBackground";
-            pnlBackground.Size = new System.Drawing.Size(442, 293);
+            pnlBackground.Size = new System.Drawing.Size(442, 277);
             pnlBackground.TabIndex = 0;
             // 
             // lblDeveloperRepositories
             // 
             lblDeveloperRepositories.AutoSize = true;
             lblDeveloperRepositories.BackColor = System.Drawing.Color.Transparent;
-            lblDeveloperRepositories.Location = new System.Drawing.Point(134, 187);
+            lblDeveloperRepositories.Location = new System.Drawing.Point(134, 178);
             lblDeveloperRepositories.Name = "lblDeveloperRepositories";
             lblDeveloperRepositories.Size = new System.Drawing.Size(148, 15);
             lblDeveloperRepositories.TabIndex = 9;
@@ -87,7 +87,7 @@
             // 
             lblDeveloperEmail.AutoSize = true;
             lblDeveloperEmail.BackColor = System.Drawing.Color.Transparent;
-            lblDeveloperEmail.Location = new System.Drawing.Point(134, 214);
+            lblDeveloperEmail.Location = new System.Drawing.Point(134, 205);
             lblDeveloperEmail.Name = "lblDeveloperEmail";
             lblDeveloperEmail.Size = new System.Drawing.Size(108, 15);
             lblDeveloperEmail.TabIndex = 8;
@@ -100,7 +100,7 @@
             label1.AutoSize = true;
             label1.BackColor = System.Drawing.Color.Transparent;
             label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label1.Location = new System.Drawing.Point(83, 123);
+            label1.Location = new System.Drawing.Point(83, 125);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(41, 15);
             label1.TabIndex = 2;
@@ -111,7 +111,7 @@
             label2.AutoSize = true;
             label2.BackColor = System.Drawing.Color.Transparent;
             label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label2.Location = new System.Drawing.Point(25, 160);
+            label2.Location = new System.Drawing.Point(25, 151);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(99, 15);
             label2.TabIndex = 3;
@@ -122,7 +122,7 @@
             label3.AutoSize = true;
             label3.BackColor = System.Drawing.Color.Transparent;
             label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label3.Location = new System.Drawing.Point(57, 187);
+            label3.Location = new System.Drawing.Point(57, 178);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(67, 15);
             label3.TabIndex = 4;
@@ -133,7 +133,7 @@
             label4.AutoSize = true;
             label4.BackColor = System.Drawing.Color.Transparent;
             label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label4.Location = new System.Drawing.Point(74, 214);
+            label4.Location = new System.Drawing.Point(74, 205);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(50, 15);
             label4.TabIndex = 5;
@@ -145,7 +145,7 @@
             LblCopyright.BackColor = System.Drawing.Color.Transparent;
             LblCopyright.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             LblCopyright.ForeColor = System.Drawing.SystemColors.ControlLight;
-            LblCopyright.Location = new System.Drawing.Point(71, 263);
+            LblCopyright.Location = new System.Drawing.Point(71, 247);
             LblCopyright.Name = "LblCopyright";
             LblCopyright.Size = new System.Drawing.Size(110, 17);
             LblCopyright.TabIndex = 7;
@@ -156,7 +156,7 @@
             lblVersion.AutoSize = true;
             lblVersion.BackColor = System.Drawing.Color.Transparent;
             lblVersion.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            lblVersion.Location = new System.Drawing.Point(133, 123);
+            lblVersion.Location = new System.Drawing.Point(133, 125);
             lblVersion.Name = "lblVersion";
             lblVersion.Size = new System.Drawing.Size(57, 15);
             lblVersion.TabIndex = 6;
@@ -178,7 +178,7 @@
             lblDeveloperName.AutoSize = true;
             lblDeveloperName.BackColor = System.Drawing.Color.Transparent;
             lblDeveloperName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            lblDeveloperName.Location = new System.Drawing.Point(133, 160);
+            lblDeveloperName.Location = new System.Drawing.Point(133, 151);
             lblDeveloperName.Name = "lblDeveloperName";
             lblDeveloperName.Size = new System.Drawing.Size(110, 15);
             lblDeveloperName.TabIndex = 2;
@@ -211,9 +211,9 @@
             // 
             pnlFooter.BackColor = System.Drawing.Color.LightGray;
             pnlFooter.Controls.Add(btnClose);
-            pnlFooter.Location = new System.Drawing.Point(-4, 302);
+            pnlFooter.Location = new System.Drawing.Point(-4, 293);
             pnlFooter.Name = "pnlFooter";
-            pnlFooter.Size = new System.Drawing.Size(461, 45);
+            pnlFooter.Size = new System.Drawing.Size(461, 51);
             pnlFooter.TabIndex = 2;
             // 
             // btnClose
@@ -226,7 +226,7 @@
             btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnClose.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            btnClose.Location = new System.Drawing.Point(10, 8);
+            btnClose.Location = new System.Drawing.Point(10, 14);
             btnClose.Name = "btnClose";
             btnClose.Size = new System.Drawing.Size(442, 26);
             btnClose.TabIndex = 8;

@@ -12,8 +12,8 @@ namespace DBMS_Services_Manager.Controller.Services
 {
     internal class Service
     {
-        private string? serviceName;
-        private string? serviceProcessName;
+        private string serviceName;
+        private string serviceProcessName;
 
         public Service(string serviceName, string serviceProcessName)
         {
@@ -30,7 +30,7 @@ namespace DBMS_Services_Manager.Controller.Services
 
         public string ServiceName
         {
-            get => serviceName!;
+            get => serviceName;
             set => serviceName = value;
         }
 
@@ -55,6 +55,15 @@ namespace DBMS_Services_Manager.Controller.Services
             }
         }
 
+        public ServiceControllerStatus ServiceStatus
+        {
+            get
+            {
+                ServiceController serviceController = new ServiceController(this.serviceProcessName);
+                return serviceController.Status;
+            }
+        }
+
         internal void StartService()
         {
             try
@@ -68,7 +77,7 @@ namespace DBMS_Services_Manager.Controller.Services
             {
                 string elevationMsg = CheckExecutionPrivileges.RequireElevationMessage();
                 const string message = "Ocorreu um erro ao tentar iniciar o serviço";
-                MessageBox.Show($"[Erro] {ex.Message}\n\n[Aviso] {elevationMsg}", message);
+                MessageBox.Show($"[Erro] {ex.Message}\n\n[Aviso] {elevationMsg}", message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -85,7 +94,7 @@ namespace DBMS_Services_Manager.Controller.Services
             {
                 string elevationMsg = CheckExecutionPrivileges.RequireElevationMessage();
                 const string message = "Ocorreu um erro ao tentar parar o serviço";
-                MessageBox.Show($"[Erro] {ex.Message}\n\n[Aviso] {elevationMsg}", message);
+                MessageBox.Show($"[Erro] {ex.Message}\n\n[Aviso] {elevationMsg}", message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

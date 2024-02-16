@@ -268,7 +268,7 @@ namespace MachineStop
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            frmConfigs frmConfigs = new frmConfigs();
+            FrmConfigs frmConfigs = new FrmConfigs();
             frmConfigs.ShowDialog();
         }
 

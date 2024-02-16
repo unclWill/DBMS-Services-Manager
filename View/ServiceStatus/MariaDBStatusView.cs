@@ -30,7 +30,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
         public void ServiceIsNotInstalledView(FrmPrincipal frmPrincipal)
         {
             frmPrincipal.TxtMariaDBServiceStatus.Text = "Não instalado";
-            frmPrincipal.PbMariaDBServiceStatus.BackgroundImage = Properties.Resources.Danger;
+            frmPrincipal.PbMariaDBServiceStatus.BackgroundImage = Properties.Resources.No;
             frmPrincipal.BtnRestartMariaDB.Enabled = false;
             frmPrincipal.BtnStopMariaDB.Enabled = false;
         }

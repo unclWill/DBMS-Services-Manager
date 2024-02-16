@@ -30,7 +30,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
         public void ServiceIsNotInstalledView(FrmPrincipal frmPrincipal)
         {
             frmPrincipal.TxtPostgreSQLServiceStatus.Text = "Não instalado";
-            frmPrincipal.PbPostgreSQLServiceStatus.BackgroundImage = Properties.Resources.Danger;
+            frmPrincipal.PbPostgreSQLServiceStatus.BackgroundImage = Properties.Resources.No;
             frmPrincipal.BtnRestartPostgreSQL.Enabled = false;
             frmPrincipal.BtnStopPostgreSQL.Enabled = false;
         }

@@ -31,7 +31,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
         public void ServiceIsNotInstalledView(FrmPrincipal frmPrincipal)
         {
             frmPrincipal.TxtSQLServerServiceStatus.Text = "Não instalado";
-            frmPrincipal.PbSQLServerServiceStatus.BackgroundImage = Properties.Resources.Danger;
+            frmPrincipal.PbSQLServerServiceStatus.BackgroundImage = Properties.Resources.No;
             frmPrincipal.BtnRestartSQLServer.Enabled = false;
             frmPrincipal.BtnStopSQLServer.Enabled = false;
         }

@@ -3,9 +3,8 @@
  * Date  : 15/02/2024
  */
 
-using System.Windows.Forms;
+using System.ServiceProcess;
 using DBMS_Services_Manager.Controller.Services;
-using DBMS_Services_Manager.View.ServiceStatus;
 
 namespace DBMS_Services_Manager.Controller.ServiceManager
 {
@@ -52,64 +51,47 @@ namespace DBMS_Services_Manager.Controller.ServiceManager
 
         internal void StopAllServices()
         {
-            StoppedServicesCounter();
-
             Service sqlServer = new Service(sqlServerProcessName);
-            if (VerifyPresence(sqlServer))
+            if (VerifyPresence(sqlServer) && VerifyServiceRunning(sqlServer))
             {
                 sqlServer.StopService();
             }
 
             Service mySql = new Service(mySqlProcessName);
-            if (VerifyPresence(mySql))
+            if (VerifyPresence(mySql) && VerifyServiceRunning(mySql))
             {
                 mySql.StopService();
             }
 
             Service postgreSql = new Service(postgreSqlProcessName);
-            if (VerifyPresence(postgreSql))
+            if (VerifyPresence(postgreSql) && VerifyServiceRunning(postgreSql))
             {
                 postgreSql.StopService();
             }
 
             Service mariaDb = new Service(mariaDbProcessName);
-            if (VerifyPresence(mariaDb))
+            if (VerifyPresence(mariaDb) && VerifyServiceRunning(mariaDb))
             {
                 mariaDb.StopService();
             }
 
             Service mongoDb = new Service(mongoDbProcessName);
-            if (VerifyPresence(mongoDb))
+            if (VerifyPresence(mongoDb) && VerifyServiceRunning(mongoDb))
             {
                 mongoDb.StopService();
             }
         }
 
-        private void StoppedServicesCounter()
+        private bool VerifyServiceRunning(Service service)
         {
-            int counter = 0;
-
-            Service sqlServer = new Service(sqlServerProcessName);
-            SQLServerStatusView sqlServerStatusView = new SQLServerStatusView();
-            ServiceMonitor serviceMonitor = new ServiceMonitor();
-            serviceMonitor.ServiceStatusMonitor(sqlServer, sqlServerStatusView);
-
-            if (VerifyServiceRunning(serviceMonitor))
-            {
-                counter++;
-            }
-
-            MessageBox.Show($"CONTADOR: {counter}");
-        }
-
-        private bool VerifyServiceRunning(ServiceMonitor serviceMonitor)
-        {
-            return (serviceMonitor.IsServiceRunning) ? true : false;
+            ServiceControllerStatus serviceStatus = service.ServiceStatus;
+            string status = serviceStatus.ToString();
+            return status.Equals("Running");
         }
 
         private bool VerifyPresence(Service service)
         {
-            return (service.IsServiceInstalled) ? true : false;
+            return service.IsServiceInstalled;
         }
     }
 }

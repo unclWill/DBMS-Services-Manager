@@ -31,7 +31,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
         public void ServiceIsNotInstalledView(FrmPrincipal frmPrincipal)
         {
             frmPrincipal.TxtMySQLServiceStatus.Text = "Não instalado";
-            frmPrincipal.PbMySQLServiceStatus.BackgroundImage = Properties.Resources.Danger;
+            frmPrincipal.PbMySQLServiceStatus.BackgroundImage = Properties.Resources.No;
             frmPrincipal.BtnRestartMySQL.Enabled = false;
             frmPrincipal.BtnStopMySQL.Enabled = false;
         }

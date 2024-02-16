@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace MachineStop.Forms
 {
-    public partial class frmConfigs : Form
+    public partial class FrmConfigs : Form
     {
-        public frmConfigs()
+        public FrmConfigs()
         {
             InitializeComponent();
             LoadConfigs();

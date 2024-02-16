@@ -30,7 +30,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
         public void ServiceIsNotInstalledView(FrmPrincipal frmPrincipal)
         {
             frmPrincipal.TxtMongoDBServiceStatus.Text = "Não instalado";
-            frmPrincipal.PbMongoDBServiceStatus.BackgroundImage = Properties.Resources.Danger;
+            frmPrincipal.PbMongoDBServiceStatus.BackgroundImage = Properties.Resources.No;
             frmPrincipal.BtnRestartMongoDB.Enabled = false;
             frmPrincipal.BtnStopMongoDB.Enabled = false;
         }

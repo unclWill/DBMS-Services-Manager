@@ -16,8 +16,7 @@ namespace DBMS_Services_Manager.Controller.Services
     /// </summary>
     internal class ServiceMonitor
     {
-        private FrmPrincipal? frmPrincipal;
-        private bool isServiceRunning;
+        private FrmPrincipal frmPrincipal;
 
         public ServiceMonitor(FrmPrincipal frmPrincipal)
         {
@@ -26,32 +25,35 @@ namespace DBMS_Services_Manager.Controller.Services
 
         public ServiceMonitor() { }
 
-        internal bool IsServiceRunning
-        {
-            get => isServiceRunning;
-            set => isServiceRunning = value;
-        }
-
         internal void ServiceStatusMonitor(Service service, IServiceStatusView serviceStatusView)
         {
-            ServiceController serviceProcess = new ServiceController(service.ServiceProcessName);
+            ServiceController serviceProcess = new();
 
-            if (service.IsServiceInstalled)
+            try
             {
-                if (serviceProcess.Status == ServiceControllerStatus.Running)
-                {
-                    serviceStatusView.ServiceRunningView(frmPrincipal!);
-                    this.IsServiceRunning = true;
-                }
-                else if (serviceProcess.Status == ServiceControllerStatus.Stopped)
-                {
-                    serviceStatusView.ServiceStoppedView(frmPrincipal!);
-                    this.IsServiceRunning = false;
-                }
+                serviceProcess = new ServiceController(service.ServiceProcessName);
             }
-            else
+            catch (Exception ex)
             {
-                serviceStatusView.ServiceIsNotInstalledView(frmPrincipal!);
+                MessageBox.Show($"[Erro] {ex}\n\n[Aviso] Verifique se o nome do serviço foi informado corretamente.","Ocorreu um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (service.IsServiceInstalled)
+                {
+                    if (serviceProcess.Status == ServiceControllerStatus.Running)
+                    {
+                        serviceStatusView.ServiceRunningView(frmPrincipal!);
+                    }
+                    else if (serviceProcess.Status == ServiceControllerStatus.Stopped)
+                    {
+                        serviceStatusView.ServiceStoppedView(frmPrincipal!);
+                    }
+                }
+                else
+                {
+                    serviceStatusView.ServiceIsNotInstalledView(frmPrincipal!);
+                }
             }
         }
 
@@ -73,16 +75,7 @@ namespace DBMS_Services_Manager.Controller.Services
         internal void MonitorTimerEventTrigger()
         {
             ServicesInitializer svcInit = new ServicesInitializer(frmPrincipal!);
-
-            try
-            {
-                svcInit.InitializeServicesStatusMonitor();
-            }
-            catch (Exception ex)
-            {
-                const string message = "Ocorreu um erro";
-                MessageBox.Show($"[Erro] {ex.Message}\n\n[Aviso] Ocorreu um erro", message);
-            }
+            svcInit.InitializeServicesStatusMonitor();
         }
     }
 }

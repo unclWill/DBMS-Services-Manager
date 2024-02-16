@@ -1,6 +1,6 @@
 ﻿namespace MachineStop.Forms
 {
-    partial class frmConfigs
+    partial class FrmConfigs
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfigs));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConfigs));
             tabConfigs = new System.Windows.Forms.TabControl();
             tpSQLServer = new System.Windows.Forms.TabPage();
-            label7 = new System.Windows.Forms.Label();
-            label6 = new System.Windows.Forms.Label();
+            lblSQLServerServiceName = new System.Windows.Forms.Label();
+            lblSQLServerMainService = new System.Windows.Forms.Label();
             txtSQLServerServiceName = new System.Windows.Forms.TextBox();
             txtSQLServerProcessName = new System.Windows.Forms.TextBox();
             tpMySQL = new System.Windows.Forms.TabPage();
-            label9 = new System.Windows.Forms.Label();
-            label10 = new System.Windows.Forms.Label();
+            lblMySQLServiceName = new System.Windows.Forms.Label();
+            lblMySQLMainService = new System.Windows.Forms.Label();
             txtMySQLServiceName = new System.Windows.Forms.TextBox();
             txtMySQLProcessName = new System.Windows.Forms.TextBox();
             tpPostgreSQL = new System.Windows.Forms.TabPage();
-            label3 = new System.Windows.Forms.Label();
-            label11 = new System.Windows.Forms.Label();
+            lblPostgreSQLMainService = new System.Windows.Forms.Label();
+            lblPostgreSQLServiceName = new System.Windows.Forms.Label();
             txtPostgreSQLProcessName = new System.Windows.Forms.TextBox();
             txtPostgreSQLServiceName = new System.Windows.Forms.TextBox();
             tpMariaDB = new System.Windows.Forms.TabPage();
-            label12 = new System.Windows.Forms.Label();
-            label13 = new System.Windows.Forms.Label();
+            lblMariaDBMainService = new System.Windows.Forms.Label();
+            lblMariaDBServiceName = new System.Windows.Forms.Label();
             txtMariaDBProcessName = new System.Windows.Forms.TextBox();
             txtMariaDBServiceName = new System.Windows.Forms.TextBox();
             tpMongoDB = new System.Windows.Forms.TabPage();
-            label14 = new System.Windows.Forms.Label();
-            label15 = new System.Windows.Forms.Label();
+            lblMongoDBMainService = new System.Windows.Forms.Label();
+            lblMongoDBServiceName = new System.Windows.Forms.Label();
             txtMongoDBProcessName = new System.Windows.Forms.TextBox();
             txtMongoDBServiceName = new System.Windows.Forms.TextBox();
             btnConfirm = new System.Windows.Forms.Button();
             btnEnableEdit = new System.Windows.Forms.Button();
             btnClose = new System.Windows.Forms.Button();
-            button1 = new System.Windows.Forms.Button();
-            panel1 = new System.Windows.Forms.Panel();
+            pnlFooter = new System.Windows.Forms.Panel();
             tabConfigs.SuspendLayout();
             tpSQLServer.SuspendLayout();
             tpMySQL.SuspendLayout();
             tpPostgreSQL.SuspendLayout();
             tpMariaDB.SuspendLayout();
             tpMongoDB.SuspendLayout();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // tabConfigs
@@ -77,46 +75,46 @@
             tabConfigs.Controls.Add(tpPostgreSQL);
             tabConfigs.Controls.Add(tpMariaDB);
             tabConfigs.Controls.Add(tpMongoDB);
-            tabConfigs.Location = new System.Drawing.Point(16, 14);
+            tabConfigs.Location = new System.Drawing.Point(12, 20);
             tabConfigs.Name = "tabConfigs";
             tabConfigs.SelectedIndex = 0;
-            tabConfigs.Size = new System.Drawing.Size(450, 182);
+            tabConfigs.Size = new System.Drawing.Size(450, 177);
             tabConfigs.TabIndex = 0;
             // 
             // tpSQLServer
             // 
             tpSQLServer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            tpSQLServer.Controls.Add(label7);
-            tpSQLServer.Controls.Add(label6);
+            tpSQLServer.Controls.Add(lblSQLServerServiceName);
+            tpSQLServer.Controls.Add(lblSQLServerMainService);
             tpSQLServer.Controls.Add(txtSQLServerServiceName);
             tpSQLServer.Controls.Add(txtSQLServerProcessName);
             tpSQLServer.Location = new System.Drawing.Point(4, 24);
             tpSQLServer.Name = "tpSQLServer";
             tpSQLServer.Padding = new System.Windows.Forms.Padding(3);
-            tpSQLServer.Size = new System.Drawing.Size(442, 154);
+            tpSQLServer.Size = new System.Drawing.Size(442, 149);
             tpSQLServer.TabIndex = 0;
             tpSQLServer.Text = "SQL Server";
             tpSQLServer.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // lblSQLServerServiceName
             // 
-            label7.AutoSize = true;
-            label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label7.Location = new System.Drawing.Point(6, 20);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(111, 15);
-            label7.TabIndex = 3;
-            label7.Text = "NOME DO SERVIÇO";
+            lblSQLServerServiceName.AutoSize = true;
+            lblSQLServerServiceName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            lblSQLServerServiceName.Location = new System.Drawing.Point(164, 20);
+            lblSQLServerServiceName.Name = "lblSQLServerServiceName";
+            lblSQLServerServiceName.Size = new System.Drawing.Size(111, 15);
+            lblSQLServerServiceName.TabIndex = 3;
+            lblSQLServerServiceName.Text = "NOME DO SERVIÇO";
             // 
-            // label6
+            // lblSQLServerMainService
             // 
-            label6.AutoSize = true;
-            label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label6.Location = new System.Drawing.Point(6, 80);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(113, 15);
-            label6.TabIndex = 3;
-            label6.Text = "SERVIÇO PRINCIPAL";
+            lblSQLServerMainService.AutoSize = true;
+            lblSQLServerMainService.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            lblSQLServerMainService.Location = new System.Drawing.Point(165, 80);
+            lblSQLServerMainService.Name = "lblSQLServerMainService";
+            lblSQLServerMainService.Size = new System.Drawing.Size(113, 15);
+            lblSQLServerMainService.TabIndex = 3;
+            lblSQLServerMainService.Text = "SERVIÇO PRINCIPAL";
             // 
             // txtSQLServerServiceName
             // 
@@ -142,37 +140,37 @@
             // 
             // tpMySQL
             // 
-            tpMySQL.Controls.Add(label9);
-            tpMySQL.Controls.Add(label10);
+            tpMySQL.Controls.Add(lblMySQLServiceName);
+            tpMySQL.Controls.Add(lblMySQLMainService);
             tpMySQL.Controls.Add(txtMySQLServiceName);
             tpMySQL.Controls.Add(txtMySQLProcessName);
             tpMySQL.Location = new System.Drawing.Point(4, 24);
             tpMySQL.Name = "tpMySQL";
             tpMySQL.Padding = new System.Windows.Forms.Padding(3);
-            tpMySQL.Size = new System.Drawing.Size(442, 154);
+            tpMySQL.Size = new System.Drawing.Size(442, 149);
             tpMySQL.TabIndex = 1;
             tpMySQL.Text = "MySQL";
             tpMySQL.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // lblMySQLServiceName
             // 
-            label9.AutoSize = true;
-            label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label9.Location = new System.Drawing.Point(6, 20);
-            label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(111, 15);
-            label9.TabIndex = 9;
-            label9.Text = "NOME DO SERVIÇO";
+            lblMySQLServiceName.AutoSize = true;
+            lblMySQLServiceName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            lblMySQLServiceName.Location = new System.Drawing.Point(166, 20);
+            lblMySQLServiceName.Name = "lblMySQLServiceName";
+            lblMySQLServiceName.Size = new System.Drawing.Size(111, 15);
+            lblMySQLServiceName.TabIndex = 9;
+            lblMySQLServiceName.Text = "NOME DO SERVIÇO";
             // 
-            // label10
+            // lblMySQLMainService
             // 
-            label10.AutoSize = true;
-            label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label10.Location = new System.Drawing.Point(6, 80);
-            label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(113, 15);
-            label10.TabIndex = 10;
-            label10.Text = "SERVIÇO PRINCIPAL";
+            lblMySQLMainService.AutoSize = true;
+            lblMySQLMainService.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            lblMySQLMainService.Location = new System.Drawing.Point(165, 80);
+            lblMySQLMainService.Name = "lblMySQLMainService";
+            lblMySQLMainService.Size = new System.Drawing.Size(113, 15);
+            lblMySQLMainService.TabIndex = 10;
+            lblMySQLMainService.Text = "SERVIÇO PRINCIPAL";
             // 
             // txtMySQLServiceName
             // 
@@ -198,36 +196,36 @@
             // 
             // tpPostgreSQL
             // 
-            tpPostgreSQL.Controls.Add(label3);
-            tpPostgreSQL.Controls.Add(label11);
+            tpPostgreSQL.Controls.Add(lblPostgreSQLMainService);
+            tpPostgreSQL.Controls.Add(lblPostgreSQLServiceName);
             tpPostgreSQL.Controls.Add(txtPostgreSQLProcessName);
             tpPostgreSQL.Controls.Add(txtPostgreSQLServiceName);
             tpPostgreSQL.Location = new System.Drawing.Point(4, 24);
             tpPostgreSQL.Name = "tpPostgreSQL";
-            tpPostgreSQL.Size = new System.Drawing.Size(442, 154);
+            tpPostgreSQL.Size = new System.Drawing.Size(442, 149);
             tpPostgreSQL.TabIndex = 2;
             tpPostgreSQL.Text = "PostgreSQL";
             tpPostgreSQL.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // lblPostgreSQLMainService
             // 
-            label3.AutoSize = true;
-            label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label3.Location = new System.Drawing.Point(6, 80);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(113, 15);
-            label3.TabIndex = 16;
-            label3.Text = "SERVIÇO PRINCIPAL";
+            lblPostgreSQLMainService.AutoSize = true;
+            lblPostgreSQLMainService.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            lblPostgreSQLMainService.Location = new System.Drawing.Point(165, 80);
+            lblPostgreSQLMainService.Name = "lblPostgreSQLMainService";
+            lblPostgreSQLMainService.Size = new System.Drawing.Size(113, 15);
+            lblPostgreSQLMainService.TabIndex = 16;
+            lblPostgreSQLMainService.Text = "SERVIÇO PRINCIPAL";
             // 
-            // label11
+            // lblPostgreSQLServiceName
             // 
-            label11.AutoSize = true;
-            label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label11.Location = new System.Drawing.Point(6, 20);
-            label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(111, 15);
-            label11.TabIndex = 17;
-            label11.Text = "NOME DO SERVIÇO";
+            lblPostgreSQLServiceName.AutoSize = true;
+            lblPostgreSQLServiceName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            lblPostgreSQLServiceName.Location = new System.Drawing.Point(165, 20);
+            lblPostgreSQLServiceName.Name = "lblPostgreSQLServiceName";
+            lblPostgreSQLServiceName.Size = new System.Drawing.Size(111, 15);
+            lblPostgreSQLServiceName.TabIndex = 17;
+            lblPostgreSQLServiceName.Text = "NOME DO SERVIÇO";
             // 
             // txtPostgreSQLProcessName
             // 
@@ -253,36 +251,36 @@
             // 
             // tpMariaDB
             // 
-            tpMariaDB.Controls.Add(label12);
-            tpMariaDB.Controls.Add(label13);
+            tpMariaDB.Controls.Add(lblMariaDBMainService);
+            tpMariaDB.Controls.Add(lblMariaDBServiceName);
             tpMariaDB.Controls.Add(txtMariaDBProcessName);
             tpMariaDB.Controls.Add(txtMariaDBServiceName);
             tpMariaDB.Location = new System.Drawing.Point(4, 24);
             tpMariaDB.Name = "tpMariaDB";
-            tpMariaDB.Size = new System.Drawing.Size(442, 154);
+            tpMariaDB.Size = new System.Drawing.Size(442, 149);
             tpMariaDB.TabIndex = 3;
             tpMariaDB.Text = "MariaDB";
             tpMariaDB.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // lblMariaDBMainService
             // 
-            label12.AutoSize = true;
-            label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label12.Location = new System.Drawing.Point(6, 80);
-            label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(113, 15);
-            label12.TabIndex = 16;
-            label12.Text = "SERVIÇO PRINCIPAL";
+            lblMariaDBMainService.AutoSize = true;
+            lblMariaDBMainService.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            lblMariaDBMainService.Location = new System.Drawing.Point(165, 80);
+            lblMariaDBMainService.Name = "lblMariaDBMainService";
+            lblMariaDBMainService.Size = new System.Drawing.Size(113, 15);
+            lblMariaDBMainService.TabIndex = 16;
+            lblMariaDBMainService.Text = "SERVIÇO PRINCIPAL";
             // 
-            // label13
+            // lblMariaDBServiceName
             // 
-            label13.AutoSize = true;
-            label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label13.Location = new System.Drawing.Point(6, 20);
-            label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(111, 15);
-            label13.TabIndex = 17;
-            label13.Text = "NOME DO SERVIÇO";
+            lblMariaDBServiceName.AutoSize = true;
+            lblMariaDBServiceName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            lblMariaDBServiceName.Location = new System.Drawing.Point(165, 20);
+            lblMariaDBServiceName.Name = "lblMariaDBServiceName";
+            lblMariaDBServiceName.Size = new System.Drawing.Size(111, 15);
+            lblMariaDBServiceName.TabIndex = 17;
+            lblMariaDBServiceName.Text = "NOME DO SERVIÇO";
             // 
             // txtMariaDBProcessName
             // 
@@ -308,36 +306,36 @@
             // 
             // tpMongoDB
             // 
-            tpMongoDB.Controls.Add(label14);
-            tpMongoDB.Controls.Add(label15);
+            tpMongoDB.Controls.Add(lblMongoDBMainService);
+            tpMongoDB.Controls.Add(lblMongoDBServiceName);
             tpMongoDB.Controls.Add(txtMongoDBProcessName);
             tpMongoDB.Controls.Add(txtMongoDBServiceName);
             tpMongoDB.Location = new System.Drawing.Point(4, 24);
             tpMongoDB.Name = "tpMongoDB";
-            tpMongoDB.Size = new System.Drawing.Size(442, 154);
+            tpMongoDB.Size = new System.Drawing.Size(442, 149);
             tpMongoDB.TabIndex = 4;
             tpMongoDB.Text = "MongoDB";
             tpMongoDB.UseVisualStyleBackColor = true;
             // 
-            // label14
+            // lblMongoDBMainService
             // 
-            label14.AutoSize = true;
-            label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label14.Location = new System.Drawing.Point(6, 80);
-            label14.Name = "label14";
-            label14.Size = new System.Drawing.Size(113, 15);
-            label14.TabIndex = 16;
-            label14.Text = "SERVIÇO PRINCIPAL";
+            lblMongoDBMainService.AutoSize = true;
+            lblMongoDBMainService.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            lblMongoDBMainService.Location = new System.Drawing.Point(165, 80);
+            lblMongoDBMainService.Name = "lblMongoDBMainService";
+            lblMongoDBMainService.Size = new System.Drawing.Size(113, 15);
+            lblMongoDBMainService.TabIndex = 16;
+            lblMongoDBMainService.Text = "SERVIÇO PRINCIPAL";
             // 
-            // label15
+            // lblMongoDBServiceName
             // 
-            label15.AutoSize = true;
-            label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label15.Location = new System.Drawing.Point(6, 20);
-            label15.Name = "label15";
-            label15.Size = new System.Drawing.Size(111, 15);
-            label15.TabIndex = 17;
-            label15.Text = "NOME DO SERVIÇO";
+            lblMongoDBServiceName.AutoSize = true;
+            lblMongoDBServiceName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            lblMongoDBServiceName.Location = new System.Drawing.Point(166, 20);
+            lblMongoDBServiceName.Name = "lblMongoDBServiceName";
+            lblMongoDBServiceName.Size = new System.Drawing.Size(111, 15);
+            lblMongoDBServiceName.TabIndex = 17;
+            lblMongoDBServiceName.Text = "NOME DO SERVIÇO";
             // 
             // txtMongoDBProcessName
             // 
@@ -363,11 +361,12 @@
             // 
             // btnConfirm
             // 
+            btnConfirm.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnConfirm.Image = (System.Drawing.Image)resources.GetObject("btnConfirm.Image");
             btnConfirm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnConfirm.Location = new System.Drawing.Point(16, 200);
+            btnConfirm.Location = new System.Drawing.Point(12, 205);
             btnConfirm.Name = "btnConfirm";
-            btnConfirm.Size = new System.Drawing.Size(442, 38);
+            btnConfirm.Size = new System.Drawing.Size(450, 38);
             btnConfirm.TabIndex = 1;
             btnConfirm.Text = "Confirmar configurações";
             btnConfirm.UseVisualStyleBackColor = true;
@@ -378,11 +377,11 @@
             btnEnableEdit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnEnableEdit.Image = (System.Drawing.Image)resources.GetObject("btnEnableEdit.Image");
             btnEnableEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnEnableEdit.Location = new System.Drawing.Point(16, 200);
+            btnEnableEdit.Location = new System.Drawing.Point(12, 205);
             btnEnableEdit.Name = "btnEnableEdit";
-            btnEnableEdit.Size = new System.Drawing.Size(442, 38);
+            btnEnableEdit.Size = new System.Drawing.Size(450, 38);
             btnEnableEdit.TabIndex = 18;
-            btnEnableEdit.Text = "Editar parâmetros";
+            btnEnableEdit.Text = "Alterar parâmetros";
             btnEnableEdit.UseVisualStyleBackColor = true;
             btnEnableEdit.Click += btnEnableEdit_Click;
             // 
@@ -395,7 +394,7 @@
             btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnClose.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnClose.Location = new System.Drawing.Point(13, 266);
+            btnClose.Location = new System.Drawing.Point(13, 275);
             btnClose.Name = "btnClose";
             btnClose.Size = new System.Drawing.Size(449, 26);
             btnClose.TabIndex = 1;
@@ -403,52 +402,35 @@
             btnClose.UseVisualStyleBackColor = true;
             btnClose.Click += btnClose_Click;
             // 
-            // button1
+            // pnlFooter
             // 
-            button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            button1.BackColor = System.Drawing.Color.WhiteSmoke;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Snow;
-            button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Linen;
-            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            button1.Location = new System.Drawing.Point(10, -46);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(722, 26);
-            button1.TabIndex = 8;
-            button1.Text = "&Fechar";
-            button1.UseVisualStyleBackColor = false;
+            pnlFooter.BackColor = System.Drawing.Color.LightGray;
+            pnlFooter.Location = new System.Drawing.Point(-3, 263);
+            pnlFooter.Name = "pnlFooter";
+            pnlFooter.Size = new System.Drawing.Size(480, 51);
+            pnlFooter.TabIndex = 19;
             // 
-            // panel1
-            // 
-            panel1.BackColor = System.Drawing.Color.LightGray;
-            panel1.Controls.Add(button1);
-            panel1.Location = new System.Drawing.Point(-3, 257);
-            panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(480, 45);
-            panel1.TabIndex = 19;
-            // 
-            // frmConfigs
+            // FrmConfigs
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackgroundImage = DBMS_Services_Manager.Properties.Resources.SiSCC_AboutBackground;
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            ClientSize = new System.Drawing.Size(474, 301);
+            ClientSize = new System.Drawing.Size(474, 313);
             Controls.Add(btnEnableEdit);
             Controls.Add(btnClose);
             Controls.Add(btnConfirm);
             Controls.Add(tabConfigs);
-            Controls.Add(panel1);
+            Controls.Add(pnlFooter);
             DoubleBuffered = true;
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "frmConfigs";
+            Name = "FrmConfigs";
             ShowInTaskbar = false;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             Text = "Configurações dos serviços";
-            TopMost = true;
             tabConfigs.ResumeLayout(false);
             tpSQLServer.ResumeLayout(false);
             tpSQLServer.PerformLayout();
@@ -460,41 +442,39 @@
             tpMariaDB.PerformLayout();
             tpMongoDB.ResumeLayout(false);
             tpMongoDB.PerformLayout();
-            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
         private System.Windows.Forms.Button btnConfirm;
-        public System.Windows.Forms.TextBox txtPostgreSQLServiceName;
-        public System.Windows.Forms.TextBox txtMySQLProcessName;
-        public System.Windows.Forms.TextBox txtSQLServerProcessName;
         public System.Windows.Forms.TextBox txtMariaDBServiceName;
-        public System.Windows.Forms.TextBox txtMongoDBServiceName;
-        public System.Windows.Forms.TabControl tabConfigs;
         public System.Windows.Forms.TabPage tpSQLServer;
         public System.Windows.Forms.TabPage tpMySQL;
         public System.Windows.Forms.TabPage tpPostgreSQL;
         public System.Windows.Forms.TabPage tpMariaDB;
         public System.Windows.Forms.TabPage tpMongoDB;
-        public System.Windows.Forms.TextBox txtSQLServerServiceName;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        public System.Windows.Forms.TextBox txtMySQLServiceName;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label11;
-        public System.Windows.Forms.TextBox txtPostgreSQLProcessName;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        public System.Windows.Forms.TextBox txtMariaDBProcessName;
+        private System.Windows.Forms.Label lblSQLServerServiceName;
+        private System.Windows.Forms.Label lblSQLServerMainService;
+        private System.Windows.Forms.Label lblMySQLServiceName;
+        private System.Windows.Forms.Label lblMySQLMainService;
+        private System.Windows.Forms.Label lblPostgreSQLMainService;
+        private System.Windows.Forms.Label lblPostgreSQLServiceName;
+        private System.Windows.Forms.Label lblMariaDBMainService;
+        private System.Windows.Forms.Label lblMariaDBServiceName;
         private System.Windows.Forms.Button btnEnableEdit;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        public System.Windows.Forms.TextBox txtMongoDBProcessName;
+        private System.Windows.Forms.Label lblMongoDBMainService;
+        private System.Windows.Forms.Label lblMongoDBServiceName;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlFooter;
+        private System.Windows.Forms.TextBox txtSQLServerProcessName;
+        private System.Windows.Forms.TextBox txtMySQLProcessName;
+        private System.Windows.Forms.TextBox txtPostgreSQLProcessName;
+        private System.Windows.Forms.TextBox txtMariaDBProcessName;
+        private System.Windows.Forms.TextBox txtMongoDBProcessName;
+        private System.Windows.Forms.TextBox txtPostgreSQLServiceName;
+        private System.Windows.Forms.TextBox txtMongoDBServiceName;
+        private System.Windows.Forms.TabControl tabConfigs;
+        private System.Windows.Forms.TextBox txtSQLServerServiceName;
+        private System.Windows.Forms.TextBox txtMySQLServiceName;
     }
 }
