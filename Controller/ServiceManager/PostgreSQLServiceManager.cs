@@ -11,15 +11,15 @@ namespace DBMS_Services_Manager.Controller.ServiceManager
     {
         public static void StartService()
         {
-            string serviceProcessName = Properties.Settings.Default.PostgreSQL_ProcessName;
-            Service postgreSql = new Service(serviceProcessName);
+            string serviceName = Properties.Settings.Default.PostgreSQL_ServiceName;
+            Service postgreSql = new Service(serviceName);
             postgreSql.StartService();
         }
 
         public static void StopService()
         {
-            string serviceProcessName = Properties.Settings.Default.PostgreSQL_ProcessName;
-            Service postgreSql = new Service(serviceProcessName);
+            string serviceName = Properties.Settings.Default.PostgreSQL_ServiceName;
+            Service postgreSql = new Service(serviceName);
             postgreSql.StopService();
         }
     }

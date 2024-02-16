@@ -11,15 +11,15 @@ namespace DBMS_Services_Manager.Controller.ServiceManager
     {
         public static void StartService()
         {
-            string serviceProcessName = Properties.Settings.Default.SQLServer_ProcessName;
-            Service sqlServer = new Service(serviceProcessName);
+            string serviceName = Properties.Settings.Default.SQLServer_ServiceName;
+            Service sqlServer = new Service(serviceName);
             sqlServer.StartService();
         }
 
         public static void StopService()
         {
-            string serviceProcessName = Properties.Settings.Default.SQLServer_ProcessName;
-            Service sqlServer = new Service(serviceProcessName);
+            string serviceName = Properties.Settings.Default.SQLServer_ServiceName;
+            Service sqlServer = new Service(serviceName);
             sqlServer.StopService();
         }
     }

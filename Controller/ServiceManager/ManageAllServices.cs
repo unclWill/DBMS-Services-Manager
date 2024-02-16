@@ -10,40 +10,40 @@ namespace DBMS_Services_Manager.Controller.ServiceManager
 {
     internal class ManageAllServices
     {
-        private string sqlServerProcessName = Properties.Settings.Default.SQLServer_ProcessName;
-        private string mySqlProcessName = Properties.Settings.Default.MySQL_ProcessName;
-        private string postgreSqlProcessName = Properties.Settings.Default.PostgreSQL_ProcessName;
-        private string mariaDbProcessName = Properties.Settings.Default.MariaDB_ProcessName;
-        private string mongoDbProcessName = Properties.Settings.Default.MongoDB_ProcessName;
+        private string sqlServerProcessName = Properties.Settings.Default.SQLServer_ServiceName;
+        private string mySqlProcessName = Properties.Settings.Default.MySQL_ServiceName;
+        private string postgreSqlProcessName = Properties.Settings.Default.PostgreSQL_ServiceName;
+        private string mariaDbProcessName = Properties.Settings.Default.MariaDB_ServiceName;
+        private string mongoDbProcessName = Properties.Settings.Default.MongoDB_ServiceName;
 
         internal void RestartAllServices()
         {
             Service sqlServer = new Service(sqlServerProcessName);
-            if (VerifyPresence(sqlServer))
+            if (CheckIfServiceIsInstalled(sqlServer))
             {
                 sqlServer.StartService();
             }
 
             Service mySql = new Service(mySqlProcessName);
-            if (VerifyPresence(mySql))
+            if (CheckIfServiceIsInstalled(mySql))
             {
                 mySql.StartService();
             }
 
             Service postgreSql = new Service(postgreSqlProcessName);
-            if (VerifyPresence(postgreSql))
+            if (CheckIfServiceIsInstalled(postgreSql))
             {
                 postgreSql.StartService();
             }
 
             Service mariaDb = new Service(mariaDbProcessName);
-            if (VerifyPresence(mariaDb))
+            if (CheckIfServiceIsInstalled(mariaDb))
             {
                 mariaDb.StartService();
             }
 
             Service mongoDb = new Service(mongoDbProcessName);
-            if (VerifyPresence(mongoDb))
+            if (CheckIfServiceIsInstalled(mongoDb))
             {
                 mongoDb.StartService();
             }
@@ -52,44 +52,44 @@ namespace DBMS_Services_Manager.Controller.ServiceManager
         internal void StopAllServices()
         {
             Service sqlServer = new Service(sqlServerProcessName);
-            if (VerifyPresence(sqlServer) && VerifyServiceRunning(sqlServer))
+            if (CheckIfServiceIsInstalled(sqlServer) && CheckIfServiceIsRunning(sqlServer))
             {
                 sqlServer.StopService();
             }
 
             Service mySql = new Service(mySqlProcessName);
-            if (VerifyPresence(mySql) && VerifyServiceRunning(mySql))
+            if (CheckIfServiceIsInstalled(mySql) && CheckIfServiceIsRunning(mySql))
             {
                 mySql.StopService();
             }
 
             Service postgreSql = new Service(postgreSqlProcessName);
-            if (VerifyPresence(postgreSql) && VerifyServiceRunning(postgreSql))
+            if (CheckIfServiceIsInstalled(postgreSql) && CheckIfServiceIsRunning(postgreSql))
             {
                 postgreSql.StopService();
             }
 
             Service mariaDb = new Service(mariaDbProcessName);
-            if (VerifyPresence(mariaDb) && VerifyServiceRunning(mariaDb))
+            if (CheckIfServiceIsInstalled(mariaDb) && CheckIfServiceIsRunning(mariaDb))
             {
                 mariaDb.StopService();
             }
 
             Service mongoDb = new Service(mongoDbProcessName);
-            if (VerifyPresence(mongoDb) && VerifyServiceRunning(mongoDb))
+            if (CheckIfServiceIsInstalled(mongoDb) && CheckIfServiceIsRunning(mongoDb))
             {
                 mongoDb.StopService();
             }
         }
 
-        private bool VerifyServiceRunning(Service service)
+        private bool CheckIfServiceIsRunning(Service service)
         {
             ServiceControllerStatus serviceStatus = service.ServiceStatus;
             string status = serviceStatus.ToString();
             return status.Equals("Running");
         }
 
-        private bool VerifyPresence(Service service)
+        private bool CheckIfServiceIsInstalled(Service service)
         {
             return service.IsServiceInstalled;
         }

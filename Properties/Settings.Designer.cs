@@ -25,61 +25,13 @@ namespace DBMS_Services_Manager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("MySQL80")]
-        public string MySQL_ProcessName {
-            get {
-                return ((string)(this["MySQL_ProcessName"]));
-            }
-            set {
-                this["MySQL_ProcessName"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("postgresql-x64-16")]
-        public string PostgreSQL_ProcessName {
-            get {
-                return ((string)(this["PostgreSQL_ProcessName"]));
-            }
-            set {
-                this["PostgreSQL_ProcessName"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("MSSQL$SQLEXPRESS")]
-        public string SQLServer_ProcessName {
-            get {
-                return ((string)(this["SQLServer_ProcessName"]));
-            }
-            set {
-                this["SQLServer_ProcessName"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string MariaDB_ProcessName {
+        public string SQLServer_ServiceName {
             get {
-                return ((string)(this["MariaDB_ProcessName"]));
+                return ((string)(this["SQLServer_ServiceName"]));
             }
             set {
-                this["MariaDB_ProcessName"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string MongoDB_ProcessName {
-            get {
-                return ((string)(this["MongoDB_ProcessName"]));
-            }
-            set {
-                this["MongoDB_ProcessName"] = value;
+                this["SQLServer_ServiceName"] = value;
             }
         }
         
@@ -110,18 +62,6 @@ namespace DBMS_Services_Manager.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SQLServer_ServiceName {
-            get {
-                return ((string)(this["SQLServer_ServiceName"]));
-            }
-            set {
-                this["SQLServer_ServiceName"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string MariaDB_ServiceName {
             get {
                 return ((string)(this["MariaDB_ServiceName"]));
@@ -140,6 +80,66 @@ namespace DBMS_Services_Manager.Properties {
             }
             set {
                 this["MongoDB_ServiceName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SQLServer_DisplayName {
+            get {
+                return ((string)(this["SQLServer_DisplayName"]));
+            }
+            set {
+                this["SQLServer_DisplayName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MySQL_DisplayName {
+            get {
+                return ((string)(this["MySQL_DisplayName"]));
+            }
+            set {
+                this["MySQL_DisplayName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PostgreSQL_DisplayName {
+            get {
+                return ((string)(this["PostgreSQL_DisplayName"]));
+            }
+            set {
+                this["PostgreSQL_DisplayName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MariaDB_DisplayName {
+            get {
+                return ((string)(this["MariaDB_DisplayName"]));
+            }
+            set {
+                this["MariaDB_DisplayName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MongoDB_DisplayName {
+            get {
+                return ((string)(this["MongoDB_DisplayName"]));
+            }
+            set {
+                this["MongoDB_DisplayName"] = value;
             }
         }
     }

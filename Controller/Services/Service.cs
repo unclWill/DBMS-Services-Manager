@@ -12,32 +12,32 @@ namespace DBMS_Services_Manager.Controller.Services
 {
     internal class Service
     {
+        private string displayName;
         private string serviceName;
-        private string serviceProcessName;
 
-        public Service(string serviceName, string serviceProcessName)
+        public Service(string displayName, string serviceName)
         {
+            DisplayName = displayName;
             ServiceName = serviceName;
-            ServiceProcessName = serviceProcessName;
         }
 
-        public Service(string serviceProcessName)
+        public Service(string serviceName)
         {
-            this.serviceProcessName = serviceProcessName;
+            this.serviceName = serviceName;
         }
 
         public Service() { }
 
-        public string ServiceName
+        public string DisplayName
         {
-            get => serviceName;
-            set => serviceName = value;
+            get => displayName;
+            set => displayName = value;
         }
 
-        public string ServiceProcessName
+        public string ServiceName
         {
-            get => serviceProcessName!;
-            set => serviceProcessName = value;
+            get => serviceName!;
+            set => serviceName = value;
         }
 
         public bool IsServiceInstalled
@@ -48,7 +48,7 @@ namespace DBMS_Services_Manager.Controller.Services
 
                 foreach (ServiceController service in services)
                 {
-                    if (service.ServiceName == serviceProcessName)
+                    if (service.ServiceName == serviceName)
                         return true;
                 }
                 return false;
@@ -59,7 +59,7 @@ namespace DBMS_Services_Manager.Controller.Services
         {
             get
             {
-                ServiceController serviceController = new ServiceController(this.serviceProcessName);
+                ServiceController serviceController = new ServiceController(this.serviceName);
                 return serviceController.Status;
             }
         }
@@ -68,7 +68,7 @@ namespace DBMS_Services_Manager.Controller.Services
         {
             try
             {
-                ServiceController serviceController = new ServiceController(this.ServiceProcessName);
+                ServiceController serviceController = new ServiceController(this.ServiceName);
                 serviceController.Start();
                 var timeout = new TimeSpan(0, 0, 5); // 5 seconds.
                 serviceController.WaitForStatus(ServiceControllerStatus.Running, timeout);
@@ -85,7 +85,7 @@ namespace DBMS_Services_Manager.Controller.Services
         {
             try
             {
-                ServiceController serviceController = new ServiceController(this.ServiceProcessName);
+                ServiceController serviceController = new ServiceController(this.ServiceName);
                 serviceController.Stop();
                 var timeout = new TimeSpan(0, 0, 5);
                 serviceController.WaitForStatus(ServiceControllerStatus.Stopped, timeout);

@@ -7,14 +7,14 @@
     <UseWindowsForms>true</UseWindowsForms>
     <StartupObject>MachineStop.Program</StartupObject>
     <Copyright>© 2022-2024 VESO Software. Direitos reservados.</Copyright>
-    <AssemblyVersion>1.14.02.24</AssemblyVersion>
+    <AssemblyVersion>1.16.02.24</AssemblyVersion>
     <Product>VESO DBMS Services Manager</Product>
     <Company>VESO Software</Company>
     <Authors>William Silva - william.silva@viannasempre.com.br</Authors>
     <ApplicationIcon>toolbox.ico</ApplicationIcon>
     <Description>Gerenciador de serviços de Bancos de Dados para Windows.</Description>
     <Title>DBMS Services Manager</Title>
-    <FileVersion>1.14.02.24</FileVersion>
+    <FileVersion>1.16.02.24</FileVersion>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/unclWill/DBMS-Services-Manager</RepositoryUrl>

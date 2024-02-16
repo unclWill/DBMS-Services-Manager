@@ -118,85 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\Remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Abort" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\Abort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\Flag.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SQLServer_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\png\SQLServer_Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Stop_sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\Stop sign.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Good_mark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\Good mark.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Danger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\Danger.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mariadb-seal-browntext.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\png\Mariadb-seal-browntext.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Good mark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\Good mark.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\Delete.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="No" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\No.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OK" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\OK.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2560px-MongoDB_Logo.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\png\2560px-MongoDB_Logo.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="242-2423721_logo-postgresql" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\png\242-2423721_logo-postgresql.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Warning1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Warning1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SiSCC_AboutBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ImageResources\png\SiSCC_AboutBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Good mark1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\Good mark.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pinion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\pinion.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Stop sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\icons\Stop sign.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mysql_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\png\Mysql_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SQL-Server-Logo-768x194" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\png\SQL-Server-Logo-768x194.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pontiffexLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ImageResources\png\pontiffexLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Apply" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ImageResources\icons\Apply.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Abort" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\Abort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Good mark1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\Good mark.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2560px-MongoDB_Logo.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\png\2560px-MongoDB_Logo.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pinion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\pinion.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Good_mark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\Good mark.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\OK.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stop sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\Stop sign.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Good mark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\Good mark.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SQL-Server-Logo-768x194" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\png\SQL-Server-Logo-768x194.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sync" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sync.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mariadb-seal-browntext.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\png\Mariadb-seal-browntext.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="242-2423721_logo-postgresql" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\png\242-2423721_logo-postgresql.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SQLServer_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\png\SQLServer_Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pontiffexLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\png\pontiffexLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\Delete.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stop_sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\Stop sign.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="vesoSoftware Avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vesoSoftware Avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Warning1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Warning1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="No" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\No.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mysql_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\png\Mysql_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\Remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Danger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\Danger.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ImageResources\icons\Flag.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tune" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tune.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

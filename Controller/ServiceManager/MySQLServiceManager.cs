@@ -11,15 +11,15 @@ namespace DBMS_Services_Manager.Controller.ServiceManager
     {
         public static void StartService()
         {
-            string serviceProcessName = Properties.Settings.Default.MySQL_ProcessName;
-            Service mySql = new Service(serviceProcessName);
+            string serviceName = Properties.Settings.Default.MySQL_ServiceName;
+            Service mySql = new Service(serviceName);
             mySql.StartService();
         }
 
         public static void StopService()
         {
-            string serviceProcessName = Properties.Settings.Default.MySQL_ProcessName;
-            Service mySql = new Service(serviceProcessName);
+            string serviceName = Properties.Settings.Default.MySQL_ServiceName;
+            Service mySql = new Service(serviceName);
             mySql.StopService();
         }
     }

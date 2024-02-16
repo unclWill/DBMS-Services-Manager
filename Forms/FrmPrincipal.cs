@@ -22,7 +22,7 @@ namespace MachineStop
             this.DoubleBuffered = true;
         }
 
-        #region Propriedades dos controles.
+        #region Controls properties.
         // SQLServer
         public PictureBox PbSQLServerServiceStatus
         {
@@ -147,9 +147,22 @@ namespace MachineStop
             get => btnStopMongoDB;
             set => btnStopMongoDB = value;
         }
+
+        // All Services
+        public Button BtnStopAllServices
+        {
+            get => btnStopAllServices;
+            set => btnStopAllServices = value;
+        }
+
+        public Button BtnRestartAllServices
+        {
+            get => btnRestartAllServices;
+            set => btnRestartAllServices = value;
+        }
         #endregion
 
-        #region Controles alternativos da janela
+        #region Customized window controls.
         ///
         /// Tornando o painel clicável e fazendo a janela ser arrastável.
         ///
@@ -198,12 +211,7 @@ namespace MachineStop
         }
         #endregion
 
-        internal void tmrServiceStatusVerifier_Tick(object sender, EventArgs e)
-        {
-            ServiceMonitor serviceMonitor = new ServiceMonitor(this);
-            serviceMonitor.MonitorTimerEventTrigger();
-        }
-
+        #region Services Management Buttons
         private void BtnStopSQLServer_Click(object sender, EventArgs e)
         {
             SQLServerServiceManager.StopService();
@@ -265,6 +273,7 @@ namespace MachineStop
             ManageAllServices manageAllServices = new ManageAllServices();
             manageAllServices.RestartAllServices();
         }
+        #endregion
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
@@ -278,12 +287,34 @@ namespace MachineStop
             aboutBox.ShowDialog();
         }
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
+        private void CheckControlsAboutExecutionPrivileges()
         {
             ElevationChecker elevationChk = new ElevationChecker();
+            if (!elevationChk.IsElevated)
+            {
+                BtnRestartAllServices.Enabled = false;
+                BtnStopAllServices.Enabled = false;
+                MessageBox.Show("É necessário executar o programa como Administrador para poder realizar operações.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            FrmConfigs frmConfigs = new FrmConfigs();
+            frmConfigs.LoadConfigs();
+
+            CheckControlsAboutExecutionPrivileges();
+            ElevationChecker elevationChk = new ElevationChecker();
             this.Text = elevationChk.WindowsElevationInfo();
+
             ServiceMonitor serviceMonitor = new ServiceMonitor(this);
             serviceMonitor.StartServiceMonitor();
+        }
+
+        internal void tmrServiceStatusVerifier_Tick(object sender, EventArgs e)
+        {
+            ServiceMonitor serviceMonitor = new ServiceMonitor(this);
+            serviceMonitor.MonitorTimerEventTrigger();
         }
     }
 }

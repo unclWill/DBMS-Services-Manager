@@ -148,29 +148,6 @@
         +S9uLxNxS6+U0gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnEnableEdit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAA+dJREFUSEullF1sU2UYx3cnNyQqGhMTE+ONCTeLA9yG84IrvFC8kACDCToYI15I
-        YpAQB2gUt/HtxZaAwsJmO9zWMacDm8AKkwGxK3NkS7a1c5Z+rO3anp5zek7b057x93nffthp9wE8J/+8
-        b8/p+/ze5/9+FOXHqSu3cNI0gIaOm6j/yYJ6ahtJxzvpfdct1LVZcNRgwf6LV1F1+jLWf/Y9MkOXFwzw
-        MCBwzQgSptwhDDtc+H10Gr/ZJmEcGEZT3xBN4g5qm0zYUHf+8SDHuyw8eTYe0aOoCfjCKiY9IQyNO9Fn
-        s6NncBz13bc5oK71BrUty4PkA/RkEtFkDAFRg9OvYMLlx4jDjf6RaZiHp3D2FyuvYmBkAvvPX10ehPme
-        A+g69FQSsdQchKgKrz+Iib/9sI37cHfMhRbzMAd4BBkP/QI+Ode3NOSY8QYHXLd6UL6nE+W7u6g1oXR3
-        B9btaseaqh9Rsr2N67WNDTjU2s8nwyD9VNWBi+bFIV+3pwEsdD2OJNmUoiqSehKSlsCMpMAVlOCZpUnc
-        d+QAohTlkLujdg5Zve+7wpAjhut5AI0DmJhVGkFEggQlsksQYXcH0fzrHa7G9kEcNlq43vnKgNdrzhQG
-        fN5izrPIlLYoX3u6UMbs+qgDa3cayLJWvFF5CcVbLmD1+828qrNXBvBq9cnCgE+benMVpGiRVWZRRtwu
-        1tL7oBqHNyLDTVZNugJ48JcH/fenYKNd1nztHl7ZeaIwoOaM8V+L6ImRLQpJo8RzedLiOmRVhU8S4PRG
-        4PD4cG9sGs6ZCIw3H+DlDxsLAyrrL+UsKiVLSqs78WZ1B8qq0xaVZcSsKmffPr5MVhmxtqoNxVt/wKyg
-        4prVjpd2NBQGbDpyIVdBSIkjIscQklWI1I+qGqIKO3xJqHOsqhRiVEmY7AqEFYw5A3zc4KgLL1Z+WxjA
-        9nAWEKbDFabkDBAUoyQFophAXKYtmyAxiJ6CltDpIMZh96bH/enwYtXWY4sDjGYH3qox/U/rWbu3GxV7
-        f0bFvl5U1PZQvwdv1/ZyG5VYCkN2N57fsgSARbaCfIXoDMhxjfpUjZKghGyxaSPE5hAi/1n8MenGc08K
-        YBLpdg3JUb4+ikLrQmsjkYL0jcWyAAtZNF/d81Rek7bI+rQVZMVm7COr/JnfHjp4LBYFsEsqHyDQwP8q
-        QgrTtp1VVMzKIsKiDEmJwS9E+TgrLfKSAHbQ1u2iA7SASugOKtlO2kFXN13ha6oMKN7WgjhtWZvDg2c3
-        f1MY8MIHX+YqeNJg1zbLk0k5P1Zu+oL/4Wm1YuPBhQFMK947TKp7LD3zLo2jxFmlMxYV/QPp8W/KiNMd
-        IwAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAGBgAAAEACADIBgAAFgAAACgAAAAYAAAAMAAAAAEACAAAAAAAoAIAAAAAAAAAAAAAAAEAAAAA

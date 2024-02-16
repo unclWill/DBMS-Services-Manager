@@ -14,19 +14,10 @@ namespace DBMS_Services_Manager.Controller.Services
     internal class ServicesInitializer
     {
         private string sqlServerServiceName = Properties.Settings.Default.SQLServer_ServiceName;
-        private string sqlServerProcessName = Properties.Settings.Default.SQLServer_ProcessName;
-
         private string mySqlServiceName = Properties.Settings.Default.MySQL_ServiceName;
-        private string mySqlProcessName = Properties.Settings.Default.MySQL_ProcessName;
-
         private string postgreSqlServiceName = Properties.Settings.Default.PostgreSQL_ServiceName;
-        private string postgreSqlProcessName = Properties.Settings.Default.PostgreSQL_ProcessName;
-
         private string mariaDbServiceName = Properties.Settings.Default.MariaDB_ServiceName;
-        private string mariaDbProcessName = Properties.Settings.Default.MariaDB_ProcessName;
-
         private string mongoDbServiceName = Properties.Settings.Default.MongoDB_ServiceName;
-        private string mongoDbProcessName = Properties.Settings.Default.MongoDB_ProcessName;
 
         private FrmPrincipal frmPrincipal;
 
@@ -46,7 +37,7 @@ namespace DBMS_Services_Manager.Controller.Services
 
         private void InitializeSQLServer()
         {
-                Service sqlServer = new Service(sqlServerServiceName, sqlServerProcessName);
+                Service sqlServer = new Service(sqlServerServiceName);
                 SQLServerStatusView sqlServerView = new SQLServerStatusView();
                 ServiceMonitor sqlServerMonitor = new ServiceMonitor(frmPrincipal);
                 sqlServerMonitor.ServiceStatusMonitor(sqlServer, sqlServerView);
@@ -55,7 +46,7 @@ namespace DBMS_Services_Manager.Controller.Services
         private void InitializeMySQL()
         {
             // Service.
-            Service mySql = new Service(mySqlServiceName, mySqlProcessName);
+            Service mySql = new Service(mySqlServiceName);
             // View.
             MySQLStatusView mySqlView = new MySQLStatusView();
             // Monitor.
@@ -65,7 +56,7 @@ namespace DBMS_Services_Manager.Controller.Services
 
         private void InitializePostgreSQL()
         {
-            Service postgreSql = new Service(postgreSqlServiceName, postgreSqlProcessName);
+            Service postgreSql = new Service(postgreSqlServiceName);
             PostgreSQLStatusView postgreSqlView = new PostgreSQLStatusView();
             ServiceMonitor postgreSqlMonitor = new ServiceMonitor(frmPrincipal);
             postgreSqlMonitor.ServiceStatusMonitor(postgreSql, postgreSqlView);
@@ -73,7 +64,7 @@ namespace DBMS_Services_Manager.Controller.Services
 
         private void InitializeMariaDB()
         {
-            Service mariaDb = new Service(mariaDbServiceName, mariaDbProcessName);
+            Service mariaDb = new Service(mariaDbServiceName);
             MariaDBStatusView mariaDbView = new MariaDBStatusView();
             ServiceMonitor mariaDbMonitor = new ServiceMonitor(frmPrincipal);
             mariaDbMonitor.ServiceStatusMonitor(mariaDb, mariaDbView);
@@ -81,7 +72,7 @@ namespace DBMS_Services_Manager.Controller.Services
 
         private void InitializeMongoDB()
         {
-            Service mongoDb = new Service(mongoDbServiceName, mongoDbProcessName);
+            Service mongoDb = new Service(mongoDbServiceName);
             MongoDBStatusView mongoDbView = new MongoDBStatusView();
             ServiceMonitor mongoDbMonitor = new ServiceMonitor(frmPrincipal);
             mongoDbMonitor.ServiceStatusMonitor(mongoDb, mongoDbView);

@@ -29,7 +29,7 @@ namespace DBMS_Services_Manager.Forms
             lblDeveloperName.Text = "William Silva";
             lblDeveloperRepositories.Text = "https://github.com/unclWill";
             lblDeveloperEmail.Text = "william.silva@viannasempre.com.br";
-            lblVersion.Text = "1.16.02.24"; // Alterar a versão nas propriedades do projeto está gerando erro.
+            lblVersion.Text = "1.16.02.24";
             LblCopyright.Text = "© 2022-2024 VESO Software. Direitos reservados.";
         }
 

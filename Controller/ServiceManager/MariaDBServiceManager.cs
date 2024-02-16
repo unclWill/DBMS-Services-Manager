@@ -11,15 +11,15 @@ namespace DBMS_Services_Manager.Controller.ServiceManager
     {
         public static void StartService()
         {
-            string serviceProcessName = Properties.Settings.Default.MariaDB_ProcessName;
-            Service mariaDb = new Service(serviceProcessName);
+            string serviceName = Properties.Settings.Default.MariaDB_ServiceName;
+            Service mariaDb = new Service(serviceName);
             mariaDb.StartService();
         }
 
         public static void StopService()
         {
-            string serviceProcessName = Properties.Settings.Default.MariaDB_ProcessName;
-            Service mariaDb = new Service(serviceProcessName);
+            string serviceName = Properties.Settings.Default.MariaDB_ServiceName;
+            Service mariaDb = new Service(serviceName);
             mariaDb.StopService();
         }
     }

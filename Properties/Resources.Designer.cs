@@ -263,6 +263,26 @@ namespace DBMS_Services_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sync {
+            get {
+                object obj = ResourceManager.GetObject("Sync", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tune {
+            get {
+                object obj = ResourceManager.GetObject("Tune", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vesoSoftware_Avatar {
             get {
                 object obj = ResourceManager.GetObject("vesoSoftware Avatar", resourceCulture);

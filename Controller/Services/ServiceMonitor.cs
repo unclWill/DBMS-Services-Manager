@@ -31,7 +31,7 @@ namespace DBMS_Services_Manager.Controller.Services
 
             try
             {
-                serviceProcess = new ServiceController(service.ServiceProcessName);
+                serviceProcess = new ServiceController(service.ServiceName);
             }
             catch (Exception ex)
             {
