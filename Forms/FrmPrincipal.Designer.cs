@@ -114,7 +114,7 @@
             pnlMySQLServiceManager.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             pnlMySQLServiceManager.Controls.Add(btnRestartMySQL);
             pnlMySQLServiceManager.Controls.Add(btnStopMySQL);
-            pnlMySQLServiceManager.Location = new System.Drawing.Point(145, 14);
+            pnlMySQLServiceManager.Location = new System.Drawing.Point(145, 16);
             pnlMySQLServiceManager.Name = "pnlMySQLServiceManager";
             pnlMySQLServiceManager.Size = new System.Drawing.Size(330, 37);
             pnlMySQLServiceManager.TabIndex = 4;
@@ -168,7 +168,7 @@
             pnlMongoDBServiceManager.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             pnlMongoDBServiceManager.Controls.Add(btnRestartMongoDB);
             pnlMongoDBServiceManager.Controls.Add(btnStopMongoDB);
-            pnlMongoDBServiceManager.Location = new System.Drawing.Point(145, 14);
+            pnlMongoDBServiceManager.Location = new System.Drawing.Point(145, 16);
             pnlMongoDBServiceManager.Name = "pnlMongoDBServiceManager";
             pnlMongoDBServiceManager.Size = new System.Drawing.Size(330, 37);
             pnlMongoDBServiceManager.TabIndex = 4;
@@ -222,7 +222,7 @@
             pnlMariaDBServiceManager.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             pnlMariaDBServiceManager.Controls.Add(btnRestartMariaDB);
             pnlMariaDBServiceManager.Controls.Add(btnStopMariaDB);
-            pnlMariaDBServiceManager.Location = new System.Drawing.Point(145, 14);
+            pnlMariaDBServiceManager.Location = new System.Drawing.Point(145, 16);
             pnlMariaDBServiceManager.Name = "pnlMariaDBServiceManager";
             pnlMariaDBServiceManager.Size = new System.Drawing.Size(330, 37);
             pnlMariaDBServiceManager.TabIndex = 4;
@@ -276,7 +276,7 @@
             pnlPostgreSQLServiceManager.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             pnlPostgreSQLServiceManager.Controls.Add(btnRestartPostgreSQL);
             pnlPostgreSQLServiceManager.Controls.Add(btnStopPostgreSQL);
-            pnlPostgreSQLServiceManager.Location = new System.Drawing.Point(145, 14);
+            pnlPostgreSQLServiceManager.Location = new System.Drawing.Point(145, 16);
             pnlPostgreSQLServiceManager.Name = "pnlPostgreSQLServiceManager";
             pnlPostgreSQLServiceManager.Size = new System.Drawing.Size(330, 37);
             pnlPostgreSQLServiceManager.TabIndex = 4;
@@ -408,7 +408,7 @@
             pbMongoDBLogo.BackColor = System.Drawing.SystemColors.Window;
             pbMongoDBLogo.BackgroundImage = DBMS_Services_Manager.Properties.Resources._2560px_MongoDB_Logo_svg;
             pbMongoDBLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            pbMongoDBLogo.Location = new System.Drawing.Point(12, 7);
+            pbMongoDBLogo.Location = new System.Drawing.Point(12, 8);
             pbMongoDBLogo.Name = "pbMongoDBLogo";
             pbMongoDBLogo.Size = new System.Drawing.Size(118, 52);
             pbMongoDBLogo.TabIndex = 6;
@@ -433,7 +433,7 @@
             pbMariaDBLogo.BackColor = System.Drawing.SystemColors.Window;
             pbMariaDBLogo.BackgroundImage = DBMS_Services_Manager.Properties.Resources.Mariadb_seal_browntext_svg;
             pbMariaDBLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            pbMariaDBLogo.Location = new System.Drawing.Point(12, 7);
+            pbMariaDBLogo.Location = new System.Drawing.Point(12, 8);
             pbMariaDBLogo.Name = "pbMariaDBLogo";
             pbMariaDBLogo.Size = new System.Drawing.Size(118, 52);
             pbMariaDBLogo.TabIndex = 6;
@@ -458,7 +458,7 @@
             pbPostgreSQLLogo.BackColor = System.Drawing.SystemColors.Window;
             pbPostgreSQLLogo.BackgroundImage = DBMS_Services_Manager.Properties.Resources._242_2423721_logo_postgresql;
             pbPostgreSQLLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            pbPostgreSQLLogo.Location = new System.Drawing.Point(12, 7);
+            pbPostgreSQLLogo.Location = new System.Drawing.Point(12, 8);
             pbPostgreSQLLogo.Name = "pbPostgreSQLLogo";
             pbPostgreSQLLogo.Size = new System.Drawing.Size(118, 52);
             pbPostgreSQLLogo.TabIndex = 6;
@@ -483,7 +483,7 @@
             pbMySQLLogo.BackColor = System.Drawing.SystemColors.Window;
             pbMySQLLogo.BackgroundImage = DBMS_Services_Manager.Properties.Resources.Mysql_logo;
             pbMySQLLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            pbMySQLLogo.Location = new System.Drawing.Point(12, 7);
+            pbMySQLLogo.Location = new System.Drawing.Point(12, 8);
             pbMySQLLogo.Name = "pbMySQLLogo";
             pbMySQLLogo.Size = new System.Drawing.Size(118, 52);
             pbMySQLLogo.TabIndex = 6;
@@ -508,7 +508,7 @@
             pbSQLServerLogo.BackColor = System.Drawing.SystemColors.Window;
             pbSQLServerLogo.BackgroundImage = DBMS_Services_Manager.Properties.Resources.SQL_Server_Logo_768x194;
             pbSQLServerLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            pbSQLServerLogo.Location = new System.Drawing.Point(12, 7);
+            pbSQLServerLogo.Location = new System.Drawing.Point(12, 8);
             pbSQLServerLogo.Name = "pbSQLServerLogo";
             pbSQLServerLogo.Size = new System.Drawing.Size(118, 52);
             pbSQLServerLogo.TabIndex = 6;
@@ -520,7 +520,7 @@
             pnlSQLServerServiceManager.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             pnlSQLServerServiceManager.Controls.Add(btnRestartSQLServer);
             pnlSQLServerServiceManager.Controls.Add(btnStopSQLServer);
-            pnlSQLServerServiceManager.Location = new System.Drawing.Point(145, 14);
+            pnlSQLServerServiceManager.Location = new System.Drawing.Point(145, 16);
             pnlSQLServerServiceManager.Name = "pnlSQLServerServiceManager";
             pnlSQLServerServiceManager.Size = new System.Drawing.Size(330, 37);
             pnlSQLServerServiceManager.TabIndex = 4;
