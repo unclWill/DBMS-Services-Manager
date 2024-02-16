@@ -15,6 +15,12 @@ namespace DBMS_Services_Manager.Controller.Services
     /// </summary>
     internal class ServicesInitializer
     {
+        private string sqlServerProcessName = Properties.Settings.Default.SQLServer_ProcessName;
+        private string mySqlProcessName = Properties.Settings.Default.MySQL_ProcessName;
+        private string postgreSqlProcessName = Properties.Settings.Default.PostgreSQL_ProcessName;
+        private string mariaDbProcessName = Properties.Settings.Default.MariaDB_ProcessName;
+        private string mongoDbProcessName = Properties.Settings.Default.MongoDB_ProcessName;
+
         private FrmPrincipal frmPrincipal;
 
         public ServicesInitializer(FrmPrincipal frmPrincipal)
@@ -40,56 +46,45 @@ namespace DBMS_Services_Manager.Controller.Services
 
         private void InitializeSQLServer()
         {
-            string serviceName = Properties.Settings.Default.SQLServer_ServiceName;
-            string serviceProcessName = Properties.Settings.Default.SQLServer_ProcessName;
-            Service sqlServer = new Service(serviceName, serviceProcessName);
+            Service sqlServer = new Service(sqlServerProcessName);
             SQLServerStatusView sqlServerView = new SQLServerStatusView();
             ServiceMonitor sqlServerMonitor = new ServiceMonitor(frmPrincipal);
-            sqlServerMonitor.ServiceStatus(sqlServer, sqlServerView);
+            sqlServerMonitor.ServiceStatusMonitor(sqlServer, sqlServerView);
         }
 
         private void InitializeMySQL()
         {
-            // Settings.
-            string serviceName = Properties.Settings.Default.MySQL_ServiceName;
-            string serviceProcessName = Properties.Settings.Default.MySQL_ProcessName;
             // Service.
-            Service mySql = new Service(serviceName, serviceProcessName);
+            Service mySql = new Service(mySqlProcessName);
             // View.
             MySQLStatusView mySqlView = new MySQLStatusView();
             // Monitor.
             ServiceMonitor mySqlMonitor = new ServiceMonitor(frmPrincipal);
-            mySqlMonitor.ServiceStatus(mySql, mySqlView);
+            mySqlMonitor.ServiceStatusMonitor(mySql, mySqlView);
         }
 
         private void InitializePostgreSQL()
         {
-            string serviceName = Properties.Settings.Default.PostgreSQL_ServiceName;
-            string serviceProcessName = Properties.Settings.Default.PostgreSQL_ProcessName;
-            Service postgreSql = new Service(serviceName, serviceProcessName);
+            Service postgreSql = new Service(postgreSqlProcessName);
             PostgreSQLStatusView postgreSqlView = new PostgreSQLStatusView();
             ServiceMonitor postgreSqlMonitor = new ServiceMonitor(frmPrincipal);
-            postgreSqlMonitor.ServiceStatus(postgreSql, postgreSqlView);
+            postgreSqlMonitor.ServiceStatusMonitor(postgreSql, postgreSqlView);
         }
 
         private void InitializeMariaDB()
         {
-            string serviceName = Properties.Settings.Default.MariaDB_ServiceName;
-            string serviceProcessName = Properties.Settings.Default.MariaDB_ProcessName;
-            Service mariaDb = new Service(serviceName, serviceProcessName);
+            Service mariaDb = new Service(mariaDbProcessName);
             MariaDBStatusView mariaDbView = new MariaDBStatusView();
             ServiceMonitor mariaDbMonitor = new ServiceMonitor(frmPrincipal);
-            mariaDbMonitor.ServiceStatus(mariaDb, mariaDbView);
+            mariaDbMonitor.ServiceStatusMonitor(mariaDb, mariaDbView);
         }
 
         private void InitializeMongoDB()
         {
-            string serviceName = Properties.Settings.Default.MongoDB_ServiceName;
-            string serviceProcessName = Properties.Settings.Default.MongoDB_ProcessName;
-            Service mongoDb = new Service(serviceName, serviceProcessName);
+            Service mongoDb = new Service(mongoDbProcessName);
             MongoDBStatusView mongoDbView = new MongoDBStatusView();
             ServiceMonitor mongoDbMonitor = new ServiceMonitor(frmPrincipal);
-            mongoDbMonitor.ServiceStatus(mongoDb, mongoDbView);
+            mongoDbMonitor.ServiceStatusMonitor(mongoDb, mongoDbView);
         }
 	}
 }

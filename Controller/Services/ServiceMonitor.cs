@@ -16,14 +16,23 @@ namespace DBMS_Services_Manager.Controller.Services
     /// </summary>
     internal class ServiceMonitor
     {
-        private FrmPrincipal frmPrincipal;
+        private FrmPrincipal? frmPrincipal;
+        private bool isServiceRunning;
 
         public ServiceMonitor(FrmPrincipal frmPrincipal)
         {
             this.frmPrincipal = frmPrincipal;
         }
 
-        internal void ServiceStatus(Service service, IServiceStatusView serviceStatusView)
+        public ServiceMonitor() { }
+
+        internal bool IsServiceRunning
+        {
+            get => isServiceRunning;
+            set => isServiceRunning = value;
+        }
+
+        internal void ServiceStatusMonitor(Service service, IServiceStatusView serviceStatusView)
         {
             ServiceController serviceProcess = new ServiceController(service.ServiceProcessName);
 
@@ -31,37 +40,39 @@ namespace DBMS_Services_Manager.Controller.Services
             {
                 if (serviceProcess.Status == ServiceControllerStatus.Running)
                 {
-                    serviceStatusView.ServiceRunningView(frmPrincipal);
+                    serviceStatusView.ServiceRunningView(frmPrincipal!);
+                    this.IsServiceRunning = true;
                 }
                 else if (serviceProcess.Status == ServiceControllerStatus.Stopped)
                 {
-                    serviceStatusView.ServiceStoppedView(frmPrincipal);
+                    serviceStatusView.ServiceStoppedView(frmPrincipal!);
+                    this.IsServiceRunning = false;
                 }
             }
             else
             {
-                serviceStatusView.ServiceIsNotInstalledView(frmPrincipal);
+                serviceStatusView.ServiceIsNotInstalledView(frmPrincipal!);
             }
         }
 
         //Timer que acompanha em tempo real o estado de execução dos serviços.
         internal void StartServiceMonitor()
         {
-            frmPrincipal.tmrServiceStatusVerifier.Interval = 300;
+            frmPrincipal!.tmrServiceStatusVerifier.Interval = 300;
             frmPrincipal.tmrServiceStatusVerifier.Tick += new EventHandler(frmPrincipal.tmrServiceStatusVerifier_Tick!);
             frmPrincipal.tmrServiceStatusVerifier.Enabled = true;
         }
 
         private void StopServiceMonitor()
         {
-            frmPrincipal.tmrServiceStatusVerifier.Interval = 3600;
+            frmPrincipal!.tmrServiceStatusVerifier.Interval = 3600;
             frmPrincipal.tmrServiceStatusVerifier.Tick += new EventHandler(frmPrincipal.tmrServiceStatusVerifier_Tick!);
             frmPrincipal.tmrServiceStatusVerifier.Enabled = false;
         }
 
         internal void MonitorTimerEventTrigger()
         {
-            ServicesInitializer svcInit = new ServicesInitializer(frmPrincipal);
+            ServicesInitializer svcInit = new ServicesInitializer(frmPrincipal!);
 
             try
             {

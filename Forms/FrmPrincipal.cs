@@ -256,12 +256,14 @@ namespace MachineStop
 
         private void btnStopAllServices_Click(object sender, EventArgs e)
         {
-
+            ManageAllServices manageAllServices = new ManageAllServices();
+            manageAllServices.StopAllServices();
         }
 
         private void btnRestartAllServices_Click(object sender, EventArgs e)
         {
-
+            ManageAllServices manageAllServices = new ManageAllServices();
+            manageAllServices.RestartAllServices();
         }
 
         private void btnSettings_Click(object sender, EventArgs e)

@@ -4,6 +4,8 @@
  */
 
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace DBMS_Services_Manager.Forms
@@ -34,6 +36,44 @@ namespace DBMS_Services_Manager.Forms
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void lblDeveloperRepositories_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string message = "Ir ao repositório do projeto no GitHub?";
+            string link = "https://github.com/unclWill/DBMS-Services-Manager";
+            OpenExternalLink(link, message);
+        }
+
+        private void lblDeveloperEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string message = "Entrar em contato via email";
+            string link = "mailto://william.silva@viannasempre.com.br";
+            OpenExternalLink(link, message);
+        }
+
+        private void OpenExternalLink(string link, string message)
+        {
+            if (MessageBox.Show(message, "Acessar link externo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Process browser = new Process();
+
+                try
+                {
+                    browser.StartInfo.UseShellExecute = true;
+                    browser.StartInfo.FileName = link;
+                    browser.Start();
+                }
+                catch (Win32Exception noBrowser)
+                {
+                    if (noBrowser.ErrorCode == -2147467259)
+                        MessageBox.Show(noBrowser.Message);
+                }
+                catch (Exception other)
+                {
+                    MessageBox.Show(other.Message);
+                }
+            }
         }
     }
 }

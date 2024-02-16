@@ -81,6 +81,7 @@
             lblDeveloperRepositories.TabIndex = 9;
             lblDeveloperRepositories.TabStop = true;
             lblDeveloperRepositories.Text = "DEVELOPER_REPOSITORIES";
+            lblDeveloperRepositories.LinkClicked += lblDeveloperRepositories_LinkClicked;
             // 
             // lblDeveloperEmail
             // 
@@ -92,6 +93,7 @@
             lblDeveloperEmail.TabIndex = 8;
             lblDeveloperEmail.TabStop = true;
             lblDeveloperEmail.Text = "DEVELOPER_EMAIL";
+            lblDeveloperEmail.LinkClicked += lblDeveloperEmail_LinkClicked;
             // 
             // label1
             // 
@@ -257,7 +259,6 @@
             ShowInTaskbar = false;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             Text = "Sobre";
-            TopMost = true;
             Load += FrmAbout_Load;
             pnlBackground.ResumeLayout(false);
             pnlBackground.PerformLayout();
