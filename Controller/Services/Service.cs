@@ -8,7 +8,6 @@ using System.ServiceProcess;
 using DBMS_Services_Manager.Controller.ExecutionPolicies;
 using System.Windows.Forms;
 using System.ComponentModel.DataAnnotations;
-using System.Drawing;
 
 namespace DBMS_Services_Manager.Controller.Services
 {
@@ -18,12 +17,11 @@ namespace DBMS_Services_Manager.Controller.Services
         private string? serviceName;
         private string? displayName;
 
-        public Service(string displayName, string serviceName)
+        public Service(string serviceName, string displayName)
         {
             if (string.IsNullOrEmpty(serviceName)) throw new ArgumentNullException(nameof(serviceName));
             else
-                this.displayName = displayName;
-                this.serviceName = serviceName;
+                this.serviceName = serviceName; this.displayName = displayName;
         }
 
         public Service(string serviceName)
@@ -67,7 +65,7 @@ namespace DBMS_Services_Manager.Controller.Services
         {
             get
             {
-                ServiceController serviceController = new ServiceController(this.serviceName);
+                ServiceController serviceController = new ServiceController(this.ServiceName);
                 return serviceController.Status;
             }
         }
