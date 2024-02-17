@@ -7,30 +7,38 @@ using System;
 using System.ServiceProcess;
 using DBMS_Services_Manager.Controller.ExecutionPolicies;
 using System.Windows.Forms;
+using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 
 namespace DBMS_Services_Manager.Controller.Services
 {
     internal class Service
     {
-        private string displayName;
-        private string serviceName;
+        [Required]
+        private string? serviceName;
+        private string? displayName;
 
         public Service(string displayName, string serviceName)
         {
-            DisplayName = displayName;
-            ServiceName = serviceName;
+            if (string.IsNullOrEmpty(serviceName)) throw new ArgumentNullException(nameof(serviceName));
+            else
+                this.displayName = displayName;
+                this.serviceName = serviceName;
         }
 
         public Service(string serviceName)
         {
-            this.serviceName = serviceName;
+            if (string.IsNullOrEmpty(serviceName))
+                throw new ArgumentNullException(nameof(serviceName));
+            else
+                this.serviceName = serviceName;
         }
 
         public Service() { }
 
         public string DisplayName
         {
-            get => displayName;
+            get => displayName!;
             set => displayName = value;
         }
 
@@ -64,14 +72,16 @@ namespace DBMS_Services_Manager.Controller.Services
             }
         }
 
-        internal void StartService()
+        internal static void StartService(string serviceName)
         {
             try
             {
-                ServiceController serviceController = new ServiceController(this.ServiceName);
-                serviceController.Start();
-                var timeout = new TimeSpan(0, 0, 5); // 5 seconds.
-                serviceController.WaitForStatus(ServiceControllerStatus.Running, timeout);
+                using (ServiceController serviceController = new ServiceController(serviceName))
+                {
+                    serviceController.Start();
+                    var timeout = new TimeSpan(0, 0, 5);
+                    serviceController.WaitForStatus(ServiceControllerStatus.Running, timeout);
+                }
             }
             catch (Exception ex)
             {
@@ -81,14 +91,16 @@ namespace DBMS_Services_Manager.Controller.Services
             }
         }
 
-        internal void StopService()
+        internal static void StopService(string serviceName)
         {
             try
             {
-                ServiceController serviceController = new ServiceController(this.ServiceName);
-                serviceController.Stop();
-                var timeout = new TimeSpan(0, 0, 5);
-                serviceController.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+                using (ServiceController serviceController = new ServiceController(serviceName))
+                {
+                    serviceController.Stop();
+                    var timeout = new TimeSpan(0, 0, 5);
+                    serviceController.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+                }
             }
             catch (Exception ex)
             {

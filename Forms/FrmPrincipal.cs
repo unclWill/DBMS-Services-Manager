@@ -11,6 +11,7 @@ using DBMS_Services_Manager.Controller.ExecutionPolicies;
 using DBMS_Services_Manager.Controller.Services;
 using DBMS_Services_Manager.Controller.ServiceManager;
 using DBMS_Services_Manager.Forms;
+using DBMS_Services_Manager.Globals;
 
 namespace MachineStop
 {
@@ -214,63 +215,63 @@ namespace MachineStop
         #region Services Management Buttons
         private void BtnStopSQLServer_Click(object sender, EventArgs e)
         {
-            SQLServerServiceManager.StopService();
+            ServiceStatusManager.StopService(ServiceName.SQLServer);
         }
 
         private void btnRestartSQLServer_Click(object sender, EventArgs e)
         {
-            SQLServerServiceManager.StartService();
+            ServiceStatusManager.StartService(ServiceName.SQLServer);
         }
 
         private void btnStopMySQL_Click(object sender, EventArgs e)
         {
-            MySQLServiceManager.StopService();
+            ServiceStatusManager.StopService(ServiceName.MySQL);
         }
 
         private void btnRestartMySQL_Click(object sender, EventArgs e)
         {
-            MySQLServiceManager.StartService();
+            ServiceStatusManager.StartService(ServiceName.MySQL);
         }
 
         private void btnStopPostgreSQL_Click(object sender, EventArgs e)
         {
-            PostgreSQLServiceManager.StopService();
+            ServiceStatusManager.StopService(ServiceName.PostgreSQL);
         }
 
         private void btnRestartPostgreSQL_Click(object sender, EventArgs e)
         {
-            PostgreSQLServiceManager.StartService();
+            ServiceStatusManager.StartService(ServiceName.PostgreSQL);
         }
 
         private void btnStopMariaDB_Click(object sender, EventArgs e)
         {
-            MariaDBServiceManager.StopService();
+            ServiceStatusManager.StopService(ServiceName.MariaDB);
         }
 
         private void btnRestartMariaDB_Click(object sender, EventArgs e)
         {
-            MariaDBServiceManager.StartService();
+            ServiceStatusManager.StartService(ServiceName.MariaDB);
         }
 
         private void btnStopMongoDB_Click(object sender, EventArgs e)
         {
-            MongoDBServiceManager.StopService();
+            ServiceStatusManager.StopService(ServiceName.MongoDB);
         }
 
         private void btnRestartMongoDB_Click(object sender, EventArgs e)
         {
-            MongoDBServiceManager.StartService();
+            ServiceStatusManager.StartService(ServiceName.MongoDB);
         }
 
         private void btnStopAllServices_Click(object sender, EventArgs e)
         {
-            ManageAllServices manageAllServices = new ManageAllServices();
+            AllServicesStatusManager manageAllServices = new AllServicesStatusManager();
             manageAllServices.StopAllServices();
         }
 
         private void btnRestartAllServices_Click(object sender, EventArgs e)
         {
-            ManageAllServices manageAllServices = new ManageAllServices();
+            AllServicesStatusManager manageAllServices = new AllServicesStatusManager();
             manageAllServices.RestartAllServices();
         }
         #endregion

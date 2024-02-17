@@ -3,9 +3,11 @@
  * Date  : 14/02/2024
  */
 
+using DBMS_Services_Manager.Globals;
 using DBMS_Services_Manager.View.ServiceStatus;
 using MachineStop;
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.ServiceProcess;
 using System.Windows.Forms;
 
@@ -16,18 +18,21 @@ namespace DBMS_Services_Manager.Controller.Services
     /// </summary>
     internal class ServiceMonitor
     {
+        [Required]
         private FrmPrincipal frmPrincipal;
 
         public ServiceMonitor(FrmPrincipal frmPrincipal)
         {
-            this.frmPrincipal = frmPrincipal;
+            if (frmPrincipal is null) throw new ArgumentNullException(nameof(frmPrincipal));
+            else
+                this.frmPrincipal = frmPrincipal;
         }
 
         public ServiceMonitor() { }
 
         internal void ServiceStatusMonitor(Service service, IServiceStatusView serviceStatusView)
         {
-            ServiceController serviceProcess = new();
+            ServiceController serviceProcess = null!;
 
             try
             {
@@ -35,7 +40,7 @@ namespace DBMS_Services_Manager.Controller.Services
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"[Erro] {ex}\n\n[Aviso] Verifique se o nome do serviço foi informado corretamente.","Ocorreu um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"[Erro] {ex}\n\n[Aviso] Verifique se o nome do serviço foi informado corretamente.", "Ocorreu um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -74,7 +79,7 @@ namespace DBMS_Services_Manager.Controller.Services
 
         internal void MonitorTimerEventTrigger()
         {
-            ServicesInitializer svcInit = new ServicesInitializer(frmPrincipal!);
+            ServicesInitializer svcInit = new ServicesInitializer(frmPrincipal, ServiceName.SQLServer, ServiceName.MySQL,  ServiceName.PostgreSQL, ServiceName.MariaDB, ServiceName.MongoDB);
             svcInit.InitializeServicesStatusMonitor();
         }
     }
