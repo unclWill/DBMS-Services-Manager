@@ -1,4 +1,5 @@
-﻿/* Author: William Silva (https://github.com/unclWill)
+﻿/*
+ * Author: William Silva (https://github.com/unclWill)
  * Date  : 14/02/2024
  */
 
