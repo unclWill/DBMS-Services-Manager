@@ -18,7 +18,7 @@ namespace MachineStop.Forms
             InitializeComponent();
         }
 
-        internal void LoadConfigs()
+        public void LoadConfigs()
         {
             try
             {
@@ -43,7 +43,7 @@ namespace MachineStop.Forms
             }
         }
 
-        private void SaveConfigs()
+        internal void SaveConfigs()
         {
             try
             {

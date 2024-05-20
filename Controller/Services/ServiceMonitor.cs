@@ -23,7 +23,8 @@ namespace DBMS_Services_Manager.Controller.Services
 
         public ServiceMonitor(FrmPrincipal frmPrincipal)
         {
-            if (frmPrincipal is null) throw new ArgumentNullException(nameof(frmPrincipal));
+            if (frmPrincipal is null) 
+                throw new ArgumentNullException(nameof(frmPrincipal));
             else
                 this.frmPrincipal = frmPrincipal;
         }

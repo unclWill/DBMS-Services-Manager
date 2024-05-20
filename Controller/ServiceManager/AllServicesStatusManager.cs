@@ -25,7 +25,7 @@ namespace DBMS_Services_Manager.Controller.ServiceManager
         private void ManageService(string serviceName, ServiceControllerStatus status, Action<string> serviceAction)
         {
             Service service = new Service(serviceName);
-            if (service.IsServiceInstalled && service.ServiceStatus == status)
+            if (service.IsServiceInstalled && service.ServiceStatus.Equals(status))
             {
                 serviceAction(serviceName);
             }

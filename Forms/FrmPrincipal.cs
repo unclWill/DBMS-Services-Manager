@@ -12,6 +12,8 @@ using DBMS_Services_Manager.Controller.Services;
 using DBMS_Services_Manager.Controller.ServiceManager;
 using DBMS_Services_Manager.Forms;
 using DBMS_Services_Manager.Globals;
+using System.Configuration;
+using DBMS_Services_Manager.Properties;
 
 namespace MachineStop
 {
@@ -21,6 +23,7 @@ namespace MachineStop
         {
             InitializeComponent();
             this.DoubleBuffered = true;
+            CheckAndCreateConfig();
         }
 
         #region Controls properties.
@@ -301,14 +304,14 @@ namespace MachineStop
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            FrmConfigs frmConfigs = new FrmConfigs();
-            frmConfigs.LoadConfigs();
-
             CheckControlsAboutExecutionPrivileges();
             ElevationChecker elevationChk = new ElevationChecker();
             this.Text = elevationChk.WindowsElevationInfo();
 
             ServiceMonitor serviceMonitor = new ServiceMonitor(this);
+
+            
+
             serviceMonitor.StartServiceMonitor();
         }
 
@@ -316,6 +319,48 @@ namespace MachineStop
         {
             ServiceMonitor serviceMonitor = new ServiceMonitor(this);
             serviceMonitor.MonitorTimerEventTrigger();
+        }
+
+        private void CheckAndCreateConfig()
+        {
+            bool firstRun = Settings.Default.FirstRun;
+            if (firstRun)
+            {
+                CreateDefaultConfig();
+            }
+            else
+            {
+                LoadServiceConfigs();
+            }
+        }
+
+        private void CreateDefaultConfig()
+        {
+            Settings.Default.SQLServer_ServiceName = "MSSQL$SQLEXPRESS";
+            Settings.Default.SQLServer_DisplayName = "SQL Server";
+            //
+            Settings.Default.MySQL_ServiceName = "MySQL80";
+            Settings.Default.MySQL_DisplayName = "MySQL";
+            //
+            Settings.Default.PostgreSQL_ServiceName = "postgresql-x64-16";
+            Settings.Default.PostgreSQL_DisplayName = "PostgreSQL";
+            //
+            Settings.Default.MariaDB_ServiceName = "mariadb";
+            Settings.Default.MariaDB_DisplayName = "MariaDB";
+            //
+            Settings.Default.MongoDB_ServiceName = "mongodb";
+            Settings.Default.MongoDB_DisplayName = "MongoDB";
+            //
+            Settings.Default.FirstRun = false;
+            //
+            Settings.Default.Save();
+            MessageBox.Show("As configurações padrão foram criadas!\nPara alterá-las acesse a aba de Configurações.", "[Aviso] Primeira execução", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void LoadServiceConfigs()
+        {
+            FrmConfigs configs = new FrmConfigs();
+            configs.LoadConfigs();
         }
     }
 }
