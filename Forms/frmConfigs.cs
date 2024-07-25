@@ -138,12 +138,22 @@ namespace MachineStop.Forms
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             SaveConfigs();
+            RestartApplicationToApllySettings();
             EnableEditing(false);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void RestartApplicationToApllySettings()
+        {
+            bool restart = DialogResult.Yes == MessageBox.Show("As alterações serão aplicadas na reinicialização da aplicação.\n\nDeseja reiniciar agora?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (restart)
+            {
+                Application.Restart();
+            }
         }
     }
 }

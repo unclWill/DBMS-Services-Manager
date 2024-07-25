@@ -346,7 +346,7 @@
             txtMongoDBServiceName.ReadOnly = true;
             txtMongoDBServiceName.Size = new System.Drawing.Size(430, 29);
             txtMongoDBServiceName.TabIndex = 13;
-            txtMongoDBServiceName.Text = "mongodb";
+            txtMongoDBServiceName.Text = "MongoDB";
             txtMongoDBServiceName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtMongoDBServiceDisplayName
