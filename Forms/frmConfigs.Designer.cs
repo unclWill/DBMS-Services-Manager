@@ -55,17 +55,22 @@
             lblMongoDBServiceDisplayName = new System.Windows.Forms.Label();
             txtMongoDBServiceName = new System.Windows.Forms.TextBox();
             txtMongoDBServiceDisplayName = new System.Windows.Forms.TextBox();
+            btnOpenServicesConsole = new System.Windows.Forms.Button();
             btnConfirm = new System.Windows.Forms.Button();
             btnEnableEdit = new System.Windows.Forms.Button();
             btnClose = new System.Windows.Forms.Button();
             pnlFooter = new System.Windows.Forms.Panel();
-            btnOpenServicesConsole = new System.Windows.Forms.Button();
+            panel1 = new System.Windows.Forms.Panel();
+            cboServiceStartup = new System.Windows.Forms.ComboBox();
+            label1 = new System.Windows.Forms.Label();
             tabConfigs.SuspendLayout();
             tpSQLServer.SuspendLayout();
             tpMySQL.SuspendLayout();
             tpPostgreSQL.SuspendLayout();
             tpMariaDB.SuspendLayout();
             tpMongoDB.SuspendLayout();
+            pnlFooter.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // tabConfigs
@@ -76,10 +81,10 @@
             tabConfigs.Controls.Add(tpPostgreSQL);
             tabConfigs.Controls.Add(tpMariaDB);
             tabConfigs.Controls.Add(tpMongoDB);
-            tabConfigs.Location = new System.Drawing.Point(12, 20);
+            tabConfigs.Location = new System.Drawing.Point(12, 12);
             tabConfigs.Name = "tabConfigs";
             tabConfigs.SelectedIndex = 0;
-            tabConfigs.Size = new System.Drawing.Size(450, 177);
+            tabConfigs.Size = new System.Drawing.Size(450, 175);
             tabConfigs.TabIndex = 0;
             // 
             // tpSQLServer
@@ -92,7 +97,7 @@
             tpSQLServer.Location = new System.Drawing.Point(4, 24);
             tpSQLServer.Name = "tpSQLServer";
             tpSQLServer.Padding = new System.Windows.Forms.Padding(3);
-            tpSQLServer.Size = new System.Drawing.Size(442, 149);
+            tpSQLServer.Size = new System.Drawing.Size(442, 147);
             tpSQLServer.TabIndex = 0;
             tpSQLServer.Text = "SQL Server";
             tpSQLServer.UseVisualStyleBackColor = true;
@@ -136,7 +141,7 @@
             txtSQLServerServiceName.ReadOnly = true;
             txtSQLServerServiceName.Size = new System.Drawing.Size(430, 29);
             txtSQLServerServiceName.TabIndex = 2;
-            txtSQLServerServiceName.Text = "MSSQL$SQLEXPRESS";
+            txtSQLServerServiceName.Text = "MSSQLSQLEXPRESS";
             txtSQLServerServiceName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tpMySQL
@@ -148,7 +153,7 @@
             tpMySQL.Location = new System.Drawing.Point(4, 24);
             tpMySQL.Name = "tpMySQL";
             tpMySQL.Padding = new System.Windows.Forms.Padding(3);
-            tpMySQL.Size = new System.Drawing.Size(442, 149);
+            tpMySQL.Size = new System.Drawing.Size(442, 147);
             tpMySQL.TabIndex = 1;
             tpMySQL.Text = "MySQL";
             tpMySQL.UseVisualStyleBackColor = true;
@@ -203,7 +208,7 @@
             tpPostgreSQL.Controls.Add(txtPostgreSQLServiceDisplayName);
             tpPostgreSQL.Location = new System.Drawing.Point(4, 24);
             tpPostgreSQL.Name = "tpPostgreSQL";
-            tpPostgreSQL.Size = new System.Drawing.Size(442, 149);
+            tpPostgreSQL.Size = new System.Drawing.Size(442, 147);
             tpPostgreSQL.TabIndex = 2;
             tpPostgreSQL.Text = "PostgreSQL";
             tpPostgreSQL.UseVisualStyleBackColor = true;
@@ -258,7 +263,7 @@
             tpMariaDB.Controls.Add(txtMariaDBServiceDisplayName);
             tpMariaDB.Location = new System.Drawing.Point(4, 24);
             tpMariaDB.Name = "tpMariaDB";
-            tpMariaDB.Size = new System.Drawing.Size(442, 149);
+            tpMariaDB.Size = new System.Drawing.Size(442, 147);
             tpMariaDB.TabIndex = 3;
             tpMariaDB.Text = "MariaDB";
             tpMariaDB.UseVisualStyleBackColor = true;
@@ -313,7 +318,7 @@
             tpMongoDB.Controls.Add(txtMongoDBServiceDisplayName);
             tpMongoDB.Location = new System.Drawing.Point(4, 24);
             tpMongoDB.Name = "tpMongoDB";
-            tpMongoDB.Size = new System.Drawing.Size(442, 149);
+            tpMongoDB.Size = new System.Drawing.Size(442, 147);
             tpMongoDB.TabIndex = 4;
             tpMongoDB.Text = "MongoDB";
             tpMongoDB.UseVisualStyleBackColor = true;
@@ -360,14 +365,28 @@
             txtMongoDBServiceDisplayName.Text = "MongoDB";
             txtMongoDBServiceDisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnOpenServicesConsole
+            // 
+            btnOpenServicesConsole.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnOpenServicesConsole.Image = DBMS_Services_Manager.Properties.Resources.Tune;
+            btnOpenServicesConsole.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnOpenServicesConsole.Location = new System.Drawing.Point(256, 3);
+            btnOpenServicesConsole.Name = "btnOpenServicesConsole";
+            btnOpenServicesConsole.Size = new System.Drawing.Size(184, 32);
+            btnOpenServicesConsole.TabIndex = 18;
+            btnOpenServicesConsole.Text = "Console de Serviços";
+            btnOpenServicesConsole.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnOpenServicesConsole.UseVisualStyleBackColor = true;
+            btnOpenServicesConsole.Click += btnOpenServicesConsole_Click;
+            // 
             // btnConfirm
             // 
             btnConfirm.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnConfirm.Image = (System.Drawing.Image)resources.GetObject("btnConfirm.Image");
             btnConfirm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnConfirm.Location = new System.Drawing.Point(13, 205);
+            btnConfirm.Location = new System.Drawing.Point(7, 3);
             btnConfirm.Name = "btnConfirm";
-            btnConfirm.Size = new System.Drawing.Size(184, 38);
+            btnConfirm.Size = new System.Drawing.Size(184, 32);
             btnConfirm.TabIndex = 1;
             btnConfirm.Text = "Confirmar alterações";
             btnConfirm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -376,12 +395,12 @@
             // 
             // btnEnableEdit
             // 
-            btnEnableEdit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnEnableEdit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             btnEnableEdit.Image = DBMS_Services_Manager.Properties.Resources.Sync;
             btnEnableEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnEnableEdit.Location = new System.Drawing.Point(12, 205);
+            btnEnableEdit.Location = new System.Drawing.Point(8, 3);
             btnEnableEdit.Name = "btnEnableEdit";
-            btnEnableEdit.Size = new System.Drawing.Size(184, 38);
+            btnEnableEdit.Size = new System.Drawing.Size(184, 32);
             btnEnableEdit.TabIndex = 18;
             btnEnableEdit.Text = "Alterar parâmetros";
             btnEnableEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -390,6 +409,7 @@
             // 
             // btnClose
             // 
+            btnClose.BackColor = System.Drawing.Color.WhiteSmoke;
             btnClose.FlatAppearance.BorderSize = 0;
             btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Snow;
             btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Linen;
@@ -397,35 +417,54 @@
             btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnClose.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnClose.Location = new System.Drawing.Point(13, 275);
+            btnClose.Location = new System.Drawing.Point(15, 11);
             btnClose.Name = "btnClose";
-            btnClose.Size = new System.Drawing.Size(449, 26);
+            btnClose.Size = new System.Drawing.Size(450, 26);
             btnClose.TabIndex = 1;
             btnClose.Text = "&Fechar";
-            btnClose.UseVisualStyleBackColor = true;
+            btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
             // 
             // pnlFooter
             // 
             pnlFooter.BackColor = System.Drawing.Color.LightGray;
-            pnlFooter.Location = new System.Drawing.Point(-3, 263);
+            pnlFooter.Controls.Add(btnClose);
+            pnlFooter.Location = new System.Drawing.Point(-3, 307);
             pnlFooter.Name = "pnlFooter";
-            pnlFooter.Size = new System.Drawing.Size(480, 51);
+            pnlFooter.Size = new System.Drawing.Size(479, 46);
             pnlFooter.TabIndex = 19;
             // 
-            // btnOpenServicesConsole
+            // panel1
             // 
-            btnOpenServicesConsole.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnOpenServicesConsole.Image = DBMS_Services_Manager.Properties.Resources.Tune;
-            btnOpenServicesConsole.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnOpenServicesConsole.Location = new System.Drawing.Point(274, 205);
-            btnOpenServicesConsole.Name = "btnOpenServicesConsole";
-            btnOpenServicesConsole.Size = new System.Drawing.Size(184, 38);
-            btnOpenServicesConsole.TabIndex = 18;
-            btnOpenServicesConsole.Text = "Console de Serviços";
-            btnOpenServicesConsole.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            btnOpenServicesConsole.UseVisualStyleBackColor = true;
-            btnOpenServicesConsole.Click += btnOpenServicesConsole_Click;
+            panel1.Controls.Add(btnOpenServicesConsole);
+            panel1.Controls.Add(btnEnableEdit);
+            panel1.Controls.Add(btnConfirm);
+            panel1.Location = new System.Drawing.Point(12, 263);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(446, 38);
+            panel1.TabIndex = 20;
+            // 
+            // cboServiceStartup
+            // 
+            cboServiceStartup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            cboServiceStartup.FormattingEnabled = true;
+            cboServiceStartup.Items.AddRange(new object[] { "Automatico", "Parado" });
+            cboServiceStartup.Location = new System.Drawing.Point(137, 220);
+            cboServiceStartup.Name = "cboServiceStartup";
+            cboServiceStartup.Size = new System.Drawing.Size(201, 25);
+            cboServiceStartup.TabIndex = 21;
+            cboServiceStartup.Text = "Automatico";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(137, 200);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(201, 17);
+            label1.TabIndex = 22;
+            label1.Text = "Modo de inicialização do serviço\r\n";
             // 
             // FrmConfigs
             // 
@@ -433,11 +472,10 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackgroundImage = DBMS_Services_Manager.Properties.Resources.SiSCC_AboutBackground;
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            ClientSize = new System.Drawing.Size(474, 313);
-            Controls.Add(btnOpenServicesConsole);
-            Controls.Add(btnEnableEdit);
-            Controls.Add(btnClose);
-            Controls.Add(btnConfirm);
+            ClientSize = new System.Drawing.Size(474, 352);
+            Controls.Add(label1);
+            Controls.Add(cboServiceStartup);
+            Controls.Add(panel1);
             Controls.Add(tabConfigs);
             Controls.Add(pnlFooter);
             DoubleBuffered = true;
@@ -461,7 +499,10 @@
             tpMariaDB.PerformLayout();
             tpMongoDB.ResumeLayout(false);
             tpMongoDB.PerformLayout();
+            pnlFooter.ResumeLayout(false);
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -496,5 +537,8 @@
         private System.Windows.Forms.TextBox txtSQLServerServiceDisplayName;
         private System.Windows.Forms.TextBox txtMySQLServiceDisplayName;
         private System.Windows.Forms.Button btnOpenServicesConsole;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cboServiceStartup;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -17,9 +17,9 @@ using DBMS_Services_Manager.Properties;
 
 namespace MachineStop
 {
-    public partial class FrmPrincipal : Form
+    public partial class FrmMain : Form
     {
-        public FrmPrincipal()
+        public FrmMain()
         {
             InitializeComponent();
             this.DoubleBuffered = true;

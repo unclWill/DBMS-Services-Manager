@@ -9,7 +9,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
 {
     internal class MongoDBStatusView : IServiceStatusView
     {
-        public void ServiceRunningView(FrmPrincipal frmPrincipal)
+        public void ServiceRunningView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtMongoDBServiceStatus.Text = "Em execução";
             frmPrincipal.BtnRestartMongoDB.Enabled = false;
@@ -18,7 +18,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
             frmPrincipal.PbMongoDBServiceStatus.BackgroundImageLayout = ImageLayout.Center;
         }
 
-        public void ServiceStoppedView(FrmPrincipal frmPrincipal)
+        public void ServiceStoppedView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtMongoDBServiceStatus.Text = "Parado";
             frmPrincipal.BtnRestartMongoDB.Enabled = true;
@@ -27,7 +27,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
             frmPrincipal.PbMongoDBServiceStatus.BackgroundImageLayout = ImageLayout.Center;
         }
 
-        public void ServiceIsNotInstalledView(FrmPrincipal frmPrincipal)
+        public void ServiceIsNotInstalledView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtMongoDBServiceStatus.Text = "Não instalado";
             frmPrincipal.PbMongoDBServiceStatus.BackgroundImage = Properties.Resources.No;

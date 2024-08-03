@@ -8,11 +8,15 @@ using System.Collections.Generic;
 using System.ServiceProcess;
 using DBMS_Services_Manager.Controller.Services;
 using DBMS_Services_Manager.Globals;
+using DBMS_Services_Manager.Properties;
+using MachineStop.Forms;
 
 namespace DBMS_Services_Manager.Controller.ServiceManager
 {
     internal class AllServicesStatusManager
     {
+        private FrmConfigs frmConfigs = new FrmConfigs();
+
         private Dictionary<string, string> serviceNames = new Dictionary<string, string>
         {
             { ServiceName.SQLServer, "SQL Server"},
@@ -43,6 +47,15 @@ namespace DBMS_Services_Manager.Controller.ServiceManager
         {
             foreach (var service in serviceNames)
             {
+                if (Settings.Default.StartupMode.Equals(ServiceStartupType.Manual))
+                {
+                    Service.StartupService(service.Key, ServiceStartMode.Manual);
+                }
+                else if (Settings.Default.StartupMode.Equals(ServiceStartupType.Automatico))
+                {
+                    Service.StartupService(service.Key, ServiceStartMode.Automatic);
+                }
+
                 ManageService(service.Key, ServiceControllerStatus.Running, Service.StopService);
             }
         }

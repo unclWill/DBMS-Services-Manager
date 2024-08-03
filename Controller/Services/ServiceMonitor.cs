@@ -19,9 +19,9 @@ namespace DBMS_Services_Manager.Controller.Services
     internal class ServiceMonitor
     {
         [Required]
-        private FrmPrincipal frmPrincipal;
+        private FrmMain frmPrincipal;
 
-        public ServiceMonitor(FrmPrincipal frmPrincipal)
+        public ServiceMonitor(FrmMain frmPrincipal)
         {
             if (frmPrincipal is null) 
                 throw new ArgumentNullException(nameof(frmPrincipal));

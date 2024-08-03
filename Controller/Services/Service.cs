@@ -8,6 +8,7 @@ using System.ServiceProcess;
 using DBMS_Services_Manager.Controller.ExecutionPolicies;
 using System.Windows.Forms;
 using System.ComponentModel.DataAnnotations;
+using System.Management;
 
 namespace DBMS_Services_Manager.Controller.Services
 {
@@ -16,6 +17,7 @@ namespace DBMS_Services_Manager.Controller.Services
         [Required]
         private string? serviceName;
         private string? displayName;
+        private string? serviceStartup;
 
         public Service(string serviceName, string displayName)
         {
@@ -27,9 +29,12 @@ namespace DBMS_Services_Manager.Controller.Services
         public Service(string serviceName)
         {
             if (string.IsNullOrEmpty(serviceName))
+            {
                 throw new ArgumentNullException(nameof(serviceName));
-            else
+            }
+            else {
                 this.serviceName = serviceName;
+            }
         }
 
         public Service() { }
@@ -44,6 +49,12 @@ namespace DBMS_Services_Manager.Controller.Services
         {
             get => serviceName!;
             set => serviceName = value;
+        }
+
+        public string ServiceStartup
+        {
+            get => serviceStartup!;
+            set => serviceStartup = value;
         }
 
         public bool IsServiceInstalled
@@ -105,6 +116,43 @@ namespace DBMS_Services_Manager.Controller.Services
                 string elevationMsg = CheckExecutionPrivileges.RequireElevationMessage();
                 const string message = "Ocorreu um erro ao tentar parar o serviço";
                 MessageBox.Show($"[Erro] {ex.Message}\n\n[Aviso] {elevationMsg}", message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        internal static void StartupService(string serviceName, ServiceStartMode startupType)
+        {
+            try
+            {
+                using (ServiceController serviceController = new ServiceController(serviceName))
+                {
+                    var timeout = new TimeSpan(0, 0, 5);
+                    serviceController.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+                    ChangeServiceStartupMode(serviceName, startupType.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                string elevationMsg = CheckExecutionPrivileges.RequireElevationMessage();
+                const string message = "Ocorreu um erro ao tentar parar o serviço";
+                MessageBox.Show($"[Erro] {ex.Message}\n\n[Aviso] {elevationMsg}", message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private static void ChangeServiceStartupMode(string serviceName, string startupMode)
+        {
+            try
+            {
+                using (ManagementObject service = new ManagementObject($"Win32_Service.Name='{serviceName}'"))
+                {
+                    ManagementBaseObject inParams = service.GetMethodParameters("ChangeStartMode");
+                    inParams["StartMode"] = startupMode;
+
+                    ManagementBaseObject outParams = service.InvokeMethod("ChangeStartMode", inParams, null);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao alterar o tipo de inicialização do serviço '{serviceName}': {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

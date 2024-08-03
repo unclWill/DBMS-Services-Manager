@@ -10,7 +10,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
 {
     internal class MySQLStatusView : IServiceStatusView
     {
-        public void ServiceRunningView(FrmPrincipal frmPrincipal)
+        public void ServiceRunningView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtMySQLServiceStatus.Text = "Em execução";
             frmPrincipal.BtnRestartMySQL.Enabled = false;
@@ -19,7 +19,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
             frmPrincipal.PbMySQLServiceStatus.BackgroundImageLayout = ImageLayout.Center;
         }
 
-        public void ServiceStoppedView(FrmPrincipal frmPrincipal)
+        public void ServiceStoppedView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtMySQLServiceStatus.Text = "Parado";
             frmPrincipal.BtnRestartMySQL.Enabled = true;
@@ -28,7 +28,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
             frmPrincipal.PbMySQLServiceStatus.BackgroundImageLayout = ImageLayout.Center;
         }
 
-        public void ServiceIsNotInstalledView(FrmPrincipal frmPrincipal)
+        public void ServiceIsNotInstalledView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtMySQLServiceStatus.Text = "Não instalado";
             frmPrincipal.PbMySQLServiceStatus.BackgroundImage = Properties.Resources.No;

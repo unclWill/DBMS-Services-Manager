@@ -9,8 +9,8 @@ namespace DBMS_Services_Manager.View.ServiceStatus
 {
     internal interface IServiceStatusView
     {
-        public void ServiceRunningView(FrmPrincipal frmPrincipal);
-        public void ServiceStoppedView(FrmPrincipal frmPrincipal);
-        public void ServiceIsNotInstalledView(FrmPrincipal frmPrincipal);
+        public void ServiceRunningView(FrmMain frmPrincipal);
+        public void ServiceStoppedView(FrmMain frmPrincipal);
+        public void ServiceIsNotInstalledView(FrmMain frmPrincipal);
     }
 }

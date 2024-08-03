@@ -9,7 +9,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
 {
     internal class PostgreSQLStatusView : IServiceStatusView
     {
-        public void ServiceRunningView(FrmPrincipal frmPrincipal)
+        public void ServiceRunningView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtPostgreSQLServiceStatus.Text = "Em execução";
             frmPrincipal.BtnRestartPostgreSQL.Enabled = false;
@@ -18,7 +18,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
             frmPrincipal.PbPostgreSQLServiceStatus.BackgroundImageLayout = ImageLayout.Center;
         }
 
-        public void ServiceStoppedView(FrmPrincipal frmPrincipal)
+        public void ServiceStoppedView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtPostgreSQLServiceStatus.Text = "Parado";
             frmPrincipal.BtnRestartPostgreSQL.Enabled = true;
@@ -27,7 +27,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
             frmPrincipal.PbPostgreSQLServiceStatus.BackgroundImageLayout = ImageLayout.Center;
         }
 
-        public void ServiceIsNotInstalledView(FrmPrincipal frmPrincipal)
+        public void ServiceIsNotInstalledView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtPostgreSQLServiceStatus.Text = "Não instalado";
             frmPrincipal.PbPostgreSQLServiceStatus.BackgroundImage = Properties.Resources.No;

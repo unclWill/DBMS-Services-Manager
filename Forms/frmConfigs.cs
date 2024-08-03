@@ -13,6 +13,12 @@ namespace MachineStop.Forms
 {
     public partial class FrmConfigs : Form
     {
+        public ComboBox CboServiceStartup
+        {
+            get { return cboServiceStartup; }
+            set { cboServiceStartup = value; }
+        }
+
         public FrmConfigs()
         {
             InitializeComponent();
@@ -36,6 +42,8 @@ namespace MachineStop.Forms
                 //
                 txtMongoDBServiceName.Text = Settings.Default.MongoDB_ServiceName;
                 txtMongoDBServiceDisplayName.Text = Settings.Default.MongoDB_DisplayName;
+                //
+                cboServiceStartup.Text = Settings.Default.StartupMode;
             }
             catch (Exception ex)
             {
@@ -76,6 +84,8 @@ namespace MachineStop.Forms
             //
             Settings.Default.MongoDB_ServiceName = txtMongoDBServiceName.Text;
             Settings.Default.MongoDB_DisplayName = txtMongoDBServiceDisplayName.Text;
+            //
+            Settings.Default.StartupMode = cboServiceStartup.Text;
             //
             Settings.Default.Save();
         }
@@ -142,11 +152,6 @@ namespace MachineStop.Forms
             EnableEditing(false);
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void RestartApplicationToApllySettings()
         {
             bool restart = DialogResult.Yes == MessageBox.Show("As alterações serão aplicadas na reinicialização da aplicação.\n\nDeseja reiniciar agora?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -154,6 +159,11 @@ namespace MachineStop.Forms
             {
                 Application.Restart();
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

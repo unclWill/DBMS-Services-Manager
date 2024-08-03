@@ -10,7 +10,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
 {
     internal class MariaDBStatusView : IServiceStatusView
     {
-        public void ServiceRunningView(FrmPrincipal frmPrincipal)
+        public void ServiceRunningView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtMariaDBServiceStatus.Text = "Em execução";
             frmPrincipal.BtnRestartMariaDB.Enabled = false;
@@ -19,7 +19,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
             frmPrincipal.PbMariaDBServiceStatus.BackgroundImageLayout = ImageLayout.Center;
         }
 
-        public void ServiceStoppedView(FrmPrincipal frmPrincipal)
+        public void ServiceStoppedView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtMariaDBServiceStatus.Text = "Parado";
             frmPrincipal.BtnRestartMariaDB.Enabled = true;
@@ -28,7 +28,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
             frmPrincipal.PbMariaDBServiceStatus.BackgroundImageLayout = ImageLayout.Center;
         }
 
-        public void ServiceIsNotInstalledView(FrmPrincipal frmPrincipal)
+        public void ServiceIsNotInstalledView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtMariaDBServiceStatus.Text = "Não instalado";
             frmPrincipal.PbMariaDBServiceStatus.BackgroundImage = Properties.Resources.No;

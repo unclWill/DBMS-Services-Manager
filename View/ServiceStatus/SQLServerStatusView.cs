@@ -10,7 +10,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
 {
     internal class SQLServerStatusView : IServiceStatusView
     {
-        public void ServiceRunningView(FrmPrincipal frmPrincipal)
+        public void ServiceRunningView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtSQLServerServiceStatus.Text = "Em execução";
             frmPrincipal.BtnRestartSQLServer.Enabled = false;
@@ -19,7 +19,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
             frmPrincipal.PbSQLServerServiceStatus.BackgroundImageLayout = ImageLayout.Center;
         }
 
-        public void ServiceStoppedView(FrmPrincipal frmPrincipal)
+        public void ServiceStoppedView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtSQLServerServiceStatus.Text = "Parado";
             frmPrincipal.BtnRestartSQLServer.Enabled = true;
@@ -28,7 +28,7 @@ namespace DBMS_Services_Manager.View.ServiceStatus
             frmPrincipal.PbSQLServerServiceStatus.BackgroundImageLayout = ImageLayout.Center;
         }
 
-        public void ServiceIsNotInstalledView(FrmPrincipal frmPrincipal)
+        public void ServiceIsNotInstalledView(FrmMain frmPrincipal)
         {
             frmPrincipal.TxtSQLServerServiceStatus.Text = "Não instalado";
             frmPrincipal.PbSQLServerServiceStatus.BackgroundImage = Properties.Resources.No;

@@ -1,6 +1,6 @@
 ﻿namespace MachineStop
 {
-    partial class FrmPrincipal
+    partial class FrmMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             pnlMySQLServiceManager = new System.Windows.Forms.Panel();
             btnRestartMySQL = new System.Windows.Forms.Button();
             btnStopMySQL = new System.Windows.Forms.Button();

@@ -16,7 +16,7 @@ namespace MachineStop
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new FrmPrincipal());
+            Application.Run(new FrmMain());
         }
     }
 }

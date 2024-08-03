@@ -19,9 +19,9 @@ namespace DBMS_Services_Manager.Controller.Services
         private string postgreSqlServiceName;
         private string mariaDbServiceName;
         private string mongoDbServiceName;
-        private FrmPrincipal frmPrincipal;
+        private FrmMain frmPrincipal;
 
-        public ServicesInitializer(FrmPrincipal frmPrincipal, string sqlServerServiceName, string mySqlServiceName, string postgreSqlServiceName, string mariaDbServiceName, string mongoDbServiceName)
+        public ServicesInitializer(FrmMain frmPrincipal, string sqlServerServiceName, string mySqlServiceName, string postgreSqlServiceName, string mariaDbServiceName, string mongoDbServiceName)
         {
             this.frmPrincipal = frmPrincipal ?? throw new ArgumentNullException(nameof(frmPrincipal));
             this.sqlServerServiceName = sqlServerServiceName ?? throw new ArgumentNullException(nameof(sqlServerServiceName));
